@@ -23,6 +23,14 @@
           align-items: center;   /* Vertically centers all objects on this line */
           gap: 7px;             /* Adds clean spacing between the objects */
         }
+        /* Base button styles */
+    .my-button {
+    }
+
+    /* Style applied only to the last clicked button */
+    .my-button.active-clicked {
+      outline: 3px solid black;
+    }
         button[data-tag="aligns"] {
             display: flex;         /* Turns the container into a flex line */
             align-items: center;   /* Vertically centers all objects on this line */
@@ -125,52 +133,52 @@
         <label>Primary Weapon:</label>
             <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
-        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
-        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">STA-52 AR</button>
-        <button data-tag="ar" onclick="calculate(65), updateAmmo('11')">liberator penetrator</button>
-        <button data-tag="ar" onclick="calculate(95), updateAmmo('9')">adjudicator</button>
-        <button data-tag="ar" onclick="calculate(90), updateAmmo('10')">MA-5C AR</button>
-        <button data-tag="ar" onclick="calculate(75), updateAmmo('7')">Liberator concussive</button>
-        <button data-tag="ar" onclick="calculate(80), updateAmmo('14')">supressor</button>
-        <button data-tag="ar" onclick="calculate(55), updateAmmo('11')">pacifier</button>
-        <button data-tag="ar" onclick="calculate(105), updateAmmo('13')">tenderizer(f)</button>
-        <button data-tag="ar" onclick="calculate(105), updateAmmo('10')">tenderizer(s)</button>
-        <button data-tag="ar" onclick="calculate(90), updateAmmo('15')">liberator carbine</button>
-        <button data-tag="ar" onclick="calculate(75), updateAmmo('10')">coyote</button>
-        <button data-tag="ar" onclick="calculate(95), updateAmmo('10')">AR/GL-21 One-Two(b) </button>
-        <button data-tag="ar" onclick="calculate(650), updateAmmo('1')">AR/GL-21 One-Two(e) </button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">liberator</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">STA-52 AR</button>
+        <button data-tag="ar" onclick="calculate(65), updateAmmo('11')"; class="my-button">liberator penetrator</button>
+        <button data-tag="ar" onclick="calculate(95), updateAmmo('9')"; class="my-button">adjudicator</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('10')"; class="my-button">MA-5C AR</button>
+        <button data-tag="ar" onclick="calculate(75), updateAmmo('7')"; class="my-button">Liberator concussive</button>
+        <button data-tag="ar" onclick="calculate(80), updateAmmo('14')"; class="my-button">supressor</button>
+        <button data-tag="ar" onclick="calculate(55), updateAmmo('11')"; class="my-button">pacifier</button>
+        <button data-tag="ar" onclick="calculate(105), updateAmmo('13')"; class="my-button">tenderizer(f)</button>
+        <button data-tag="ar" onclick="calculate(105), updateAmmo('10')"; class="my-button">tenderizer(s)</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('15')"; class="my-button">liberator carbine</button>
+        <button data-tag="ar" onclick="calculate(75), updateAmmo('10')"; class="my-button">coyote</button>
+        <button data-tag="ar" onclick="calculate(95), updateAmmo('10')"; class="my-button">AR/GL-21 One-Two(b) </button>
+        <button data-tag="ar" onclick="calculate(650), updateAmmo('1')"; class="my-button">AR/GL-21 One-Two(e) </button>
             </div>    
             <div>
         <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
-        <button data-tag="mr" onclick="calculate(165), updateAmmo('6')">Dilligence</button>
-        <button data-tag="mr" onclick="calculate(180), updateAmmo('1')">R-2124 Constitution</button>
-        <button data-tag="mr" onclick="calculate(200), updateAmmo('8')">R-2 Amendment</button>
-        <button data-tag="mr" onclick="calculate(165), updateAmmo('7')">R-72 Censor</button>
-        <button data-tag="mr" onclick="calculate(200), updateAmmo('6')">R-63CS Diligence Counter Sniper</button>
-        <button data-tag="mr" onclick="calculate(300), updateAmmo('2')">R-6 Deadeye</button>
+        <button data-tag="mr" onclick="calculate(165), updateAmmo('6')"; class="my-button">Dilligence</button>
+        <button data-tag="mr" onclick="calculate(180), updateAmmo('1')"; class="my-button">R-2124 Constitution</button>
+        <button data-tag="mr" onclick="calculate(200), updateAmmo('8')"; class="my-button">R-2 Amendment</button>
+        <button data-tag="mr" onclick="calculate(165), updateAmmo('7')"; class="my-button">R-72 Censor</button>
+        <button data-tag="mr" onclick="calculate(200), updateAmmo('6')"; class="my-button">R-63CS Diligence Counter Sniper</button>
+        <button data-tag="mr" onclick="calculate(300), updateAmmo('2')"; class="my-button">R-6 Deadeye</button>
             </div>
             <div>
         <label  style="color: #FF0000"; data-tag="indent">Submachine Guns</label><br>
-        <button data-tag="smg" onclick="calculate(110), updateAmmo('9')">Defender</button>
-        <button data-tag="smg" onclick="calculate(85), updateAmmo('8')">Pummeler</button>
-        <button data-tag="smg" onclick="calculate(90), updateAmmo('10')">M7S SMG</button>
-        <button data-tag="smg" onclick="calculate(90), updateAmmo('12')">StA-11 SMG</button>
-        <button data-tag="smg" onclick="calculate(130), updateAmmo('7')">Stoker(b)</button>
-        <button data-tag="smg" onclick="calculate(150), updateAmmo('7')">Stoker(f)</button>
-        <button data-tag="smg" onclick="calculate(65), updateAmmo('25')">Gallant</button>
-        <button data-tag="smg" onclick="calculate(90), updateAmmo('15')">Knight</button>
-        <button data-tag="smg" onclick="calculate(140), updateAmmo('98')">Reprimand</button>
+        <button data-tag="smg" onclick="calculate(110), updateAmmo('9')"; class="my-button">Defender</button>
+        <button data-tag="smg" onclick="calculate(85), updateAmmo('8')"; class="my-button">Pummeler</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('10')"; class="my-button">M7S SMG</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('12')"; class="my-button">StA-11 SMG</button>
+        <button data-tag="smg" onclick="calculate(130), updateAmmo('7')"; class="my-button">Stoker(b)</button>
+        <button data-tag="smg" onclick="calculate(150), updateAmmo('7')"; class="my-button">Stoker(f)</button>
+        <button data-tag="smg" onclick="calculate(65), updateAmmo('25')"; class="my-button">Gallant</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('15')"; class="my-button">Knight</button>
+        <button data-tag="smg" onclick="calculate(140), updateAmmo('98')"; class="my-button">Reprimand</button>
             </div>
             <div>
         <label  style="color: #100000"; data-tag="indent">Shotguns</label><br>
-        <button data-tag="sg" onclick="calculate(405), updateAmmo('2')">Punisher</button>
+        <button data-tag="sg" onclick="calculate(405), updateAmmo('2')"; class="my-button">Punisher</button>
             </div>
             <div>
         <label  style="color: #008000"; data-tag="indent">Explosive</label><br>
             </div>
             <div>
         <label  style="color: #FFFF00"; data-tag="indent">Energy-Based</label><br>
-        <button data-tag="las" onclick="calculate(60), updateAmmo('12')">Sickle</button>
+        <button data-tag="las" onclick="calculate(60), updateAmmo('12')"; class="my-button">Sickle</button>
             </div>
             <div>
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
@@ -209,23 +217,23 @@
         <label>Secondary Weapon:</label>
             <div>
         <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')">P-2 Peacemaker</button>
-        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')">P-19 Redeemer</button>
-        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')">P-69 Veto</button>	
-        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')">M6C/SOCOM Pistol</button>
-        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')">P-112 Verdict</button>
-        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')">P-92 Warrant</button>		
-        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')">P-4 Senator</button>	
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">P-2 Peacemaker</button>
+        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">P-19 Redeemer</button>
+        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
+        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
+        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
+        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
+        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
             <div>
         <label  style="color: #FF0000"; data-tag="indent">melee</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')">CQC-2 Saber</button>
-        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')">CQC-73 Entrenchment Tool</button>
-        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')">P-69 Veto</button>	
-        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')">M6C/SOCOM Pistol</button>
-        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')">P-112 Verdict</button>
-        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')">P-92 Warrant</button>		
-        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')">P-4 Senator</button>	
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">CQC-2 Saber</button>
+        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">CQC-73 Entrenchment Tool</button>
+        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
+        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
+        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
+        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
+        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
     </div>
     <script>
@@ -325,6 +333,18 @@
             // Display the result on the webpage
             document.getElementById('resultValue2').innerText = finalResult;
         }
+    // Select all buttons
+    const buttons = document.querySelectorAll('.my-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // 1. Remove the active class from whichever button currently has it
+        document.querySelector('.my-button.active-clicked')?.classList.remove('active-clicked');
+        
+        // 2. Add the active class to the newly clicked button
+        this.classList.add('active-clicked');
+      });
+    });
     </script>
 
 </body>
