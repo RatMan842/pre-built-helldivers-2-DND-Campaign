@@ -79,7 +79,9 @@
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
         <label>Primary Weapon:</label>
-            <div>
+            <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">STA-52 AR</button>
@@ -96,6 +98,7 @@
         <button data-tag="ar" onclick="calculate(95), updateAmmo('10')">AR/GL-21 One-Two(b) </button>
         <button data-tag="ar" onclick="calculate(650), updateAmmo('1')">AR/GL-21 One-Two(e) </button>
             </div>
+          </div>
             <div>
         <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
         <button data-tag="mr" onclick="calculate(165), updateAmmo('6')">Dilligence</button>
@@ -108,6 +111,14 @@
             <div>
         <label  style="color: #FF0000"; data-tag="indent">Submachine Guns</label><br>
         <button data-tag="smg" onclick="calculate(110), updateAmmo('9')">Defender</button>
+        <button data-tag="smg" onclick="calculate(85), updateAmmo('8')">Pummeler</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('10')">M7S SMG</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('12')">StA-11 SMG</button>
+        <button data-tag="smg" onclick="calculate(130), updateAmmo('7')">Stoker(b)</button>
+        <button data-tag="smg" onclick="calculate(150), updateAmmo('7')">Stoker(f)</button>
+        <button data-tag="smg" onclick="calculate(65), updateAmmo('25')">Gallant</button>
+        <button data-tag="smg" onclick="calculate(90), updateAmmo('15')">Knight</button>
+        <button data-tag="smg" onclick="calculate(140), updateAmmo('98')">Reprimand</button>
             </div>
             <div>
         <label  style="color: #100000"; data-tag="indent">Shotguns</label><br>
