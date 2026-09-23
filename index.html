@@ -99,22 +99,22 @@
     <div class="button-group">
          <div class="aligner">
     <div class="ammo-group">
-        <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
+        <label for="ammoInput">bullets shot (max <span id="output"></span>):</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput">Enter a number:</label>
+        <label for="numInput">num rolled:</label>
         <input type="number" id="numInput" value="15" placeholder="Type a number...">
     </div>
 
      <div id="ap-group">
          <label>is the Ap of the weapon:</label>
          <div class="aligner2">
-         <button data-tag="aligns" onclick="updateAP('0')">less</button>
-         <button data-tag="aligns" onclick="updateAP('0.6')">the same</button>
-         <button data-tag="aligns" onclick="updateAP('1')">higher</button>
+         <button onclick="updateAP('0')">less</button>
+         <button onclick="updateAP('0.6')">the same</button>
+         <button onclick="updateAP('1')">higher</button>
          </div>
     </div>
     <!-- Step 3: Display Result -->
@@ -196,9 +196,9 @@
      <div id="ap-group">
          <label>is the Ap of the weapon:</label>
          <div class="aligner2">
-         <button data-tag="aligns" onclick="updateAP2('0')">less</button>
-         <button data-tag="aligns" onclick="updateAP2('0.6')">the same</button>
-         <button data-tag="aligns" onclick="updateAP2('1')">higher</button>
+         <button onclick="updateAP2('0')">less</button>
+         <button onclick="updateAP2('0.6')">the same</button>
+         <button onclick="updateAP2('1')">higher</button>
          </div>
     </div>
     <!-- Step 3: Display Result -->
