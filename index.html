@@ -16,7 +16,12 @@
         .aligner {
           display: flex;         /* Turns the container into a flex line */
           align-items: center;   /* Vertically centers all objects on this line */
-          gap: 15px;             /* Adds clean spacing between the objects */
+          gap: 30px;             /* Adds clean spacing between the objects */
+        }
+        .aligner2 {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: center;   /* Vertically centers all objects on this line */
+          gap: 7px;             /* Adds clean spacing between the objects */
         }
         button[data-tag="aligns"] {
             display: flex;         /* Turns the container into a flex line */
@@ -106,7 +111,7 @@
 
      <div id="ap-group">
          <label>is the Ap of the weapon:</label>
-         <div class="aligner">
+         <div class="aligner2">
          <button data-tag="aligns" onclick="updateAP('0')">less</button>
          <button data-tag="aligns" onclick="updateAP('0.6')">the same</button>
          <button data-tag="aligns" onclick="updateAP('1')">higher</button>
@@ -190,7 +195,7 @@
 
      <div id="ap-group">
          <label>is the Ap of the weapon:</label>
-         <div class="aligner">
+         <div class="aligner2">
          <button data-tag="aligns" onclick="updateAP2('0')">less</button>
          <button data-tag="aligns" onclick="updateAP2('0.6')">the same</button>
          <button data-tag="aligns" onclick="updateAP2('1')">higher</button>
