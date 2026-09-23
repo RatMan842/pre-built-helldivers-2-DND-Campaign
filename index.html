@@ -18,12 +18,6 @@
             margin-bottom: 8px;
             font-weight: bold;
         }
-        input {
-            padding: 8px;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
         button {
             padding: 10px 15px;
             margin-right: 5px;
@@ -37,6 +31,12 @@
         button:hover {
             background-color: #e0e0e0;
         }
+        input {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
         #result-box {
             padding: 15px;
             background-color: #f9f9f9;
@@ -49,21 +49,21 @@
 
     <h2>Calculator</h2>
 
-    <!-- Step 1: User Input -->
-    <div class="input-group">
-        <label for="numInput">Enter a number:</label>
-        <input type="number" id="numInput" value="100" placeholder="Type a number...">
-    </div>
-
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
-        <label>Multiply (Input / 20) by:</label>
+        <label>Weapon choices:</label>
         <button onclick="calculate(990)">liberator</button>
         <button onclick="calculate(990)">STA-52 AR</button>
         <button onclick="calculate(990)">Defender</button>
         <button onclick="calculate(990)">Dilligence</button>
         <button onclick="calculate(810)">Punisher</button>
         <button onclick="calculate(750)">Sickle</button>
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput">Enter a number:</label>
+        <input type="number" id="numInput" value="100" placeholder="Type a number...">
     </div>
 
     <!-- Step 3: Display Result -->
