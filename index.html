@@ -13,6 +13,9 @@
         .input-group, .button-group {
             margin-bottom: 20px;
         }
+        button[data-tag="AR"] {
+            background-color: #E34F26; /* Orange */
+        }
         label {
             display: block;
             margin-bottom: 8px;
@@ -52,7 +55,7 @@
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
         <label>Weapon choices:</label>
-        <button onclick="calculate(990)">liberator</button>
+        <button data-tag="AR" onclick="calculate(990)">liberator</button>
         <button onclick="calculate(990)">STA-52 AR</button>
         <button onclick="calculate(990)">Defender</button>
         <button onclick="calculate(990)">Dilligence</button>
