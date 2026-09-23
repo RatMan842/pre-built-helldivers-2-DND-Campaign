@@ -10,7 +10,7 @@
             margin: 40px;
             max-width: 400px;
         }
-        .input-group, .button-group {
+        .input-group, .button-group, .ammo-group {
             margin-bottom: 20px;
         }
         button[data-tag="ar"] {
@@ -81,19 +81,19 @@
         <label>Primary Weapon:</label>
             <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
-        <button data-tag="ar" onclick="calculate(990)">liberator</button>
-        <button data-tag="ar" onclick="calculate(990)">STA-52 AR</button>
-        <button data-tag="ar" onclick="calculate(715)">liberator penetrator</button>
-        <button data-tag="ar" onclick="calculate(855)">adjudicator</button>
-        <button data-tag="ar" onclick="calculate(900)">MA-5C AR</button>
-        <button data-tag="ar" onclick="calculate(525)">Liberator concussive</button>
-        <button data-tag="ar" onclick="calculate(1120)">supressor</button>
-        <button data-tag="ar" onclick="calculate(605)">pacifier</button>
-        <button data-tag="ar" onclick="calculate(1260)">tenderizer</button>
-        <button data-tag="ar" onclick="calculate(1350)">liberator carbine</button>
-        <button data-tag="ar" onclick="calculate(750)">coyote</button>
-        <button data-tag="ar" onclick="calculate(990)">AR/GL-21 One-Two(b) </button>
-        <button data-tag="ar" onclick="calculate(950)">AR/GL-21 One-Two(e) </button>
+        <button data-tag="ar" onclick="calculate(990), updateAmmo('11')">liberator</button>
+        <button data-tag="ar" onclick="calculate(990), updateAmmo('11')">STA-52 AR</button>
+        <button data-tag="ar" onclick="calculate(715), updateAmmo('11')">liberator penetrator</button>
+        <button data-tag="ar" onclick="calculate(855), updateAmmo('9')">adjudicator</button>
+        <button data-tag="ar" onclick="calculate(900), updateAmmo('10')">MA-5C AR</button>
+        <button data-tag="ar" onclick="calculate(525), updateAmmo('7')">Liberator concussive</button>
+        <button data-tag="ar" onclick="calculate(1120), updateAmmo('14')">supressor</button>
+        <button data-tag="ar" onclick="calculate(605), updateAmmo('11')">pacifier</button>
+        <button data-tag="ar" onclick="calculate(1260), updateAmmo('')">tenderizer</button>
+        <button data-tag="ar" onclick="calculate(1350), updateAmmo('')">liberator carbine</button>
+        <button data-tag="ar" onclick="calculate(750), updateAmmo('')">coyote</button>
+        <button data-tag="ar" onclick="calculate(990), updateAmmo('')">AR/GL-21 One-Two(b) </button>
+        <button data-tag="ar" onclick="calculate(950), updateAmmo('')">AR/GL-21 One-Two(e) </button>
             </div>
             <div>
         <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
@@ -123,19 +123,31 @@
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
             </div>
     </div>
-    
-        <!-- Step 1: User Input -->
-    <div class="input-group">
+
+    <div class="ammo-group">
         <label for="numInput">Enter a number:</label>
         <input type="number" id="numInput" value="20" placeholder="Type a number...">
     </div>
-
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput">Enter a number from 1 to <span id="ammo"></span>:</label>
+        <input type="number" id="numInput" value="20" placeholder="Type a number...">
+    </div>
+    
     <!-- Step 3: Display Result -->
     <div id="result-box">
         Result: <strong id="resultValue">0</strong>
     </div>
 
     <script>
+        let ammo = "45";
+        function updateAmmo(newValue) {
+          ammo = newValue; // Assigns the new value to the let variable
+          console.log(selectedValue); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("output").innerText = selectedValue;
+        }
         function calculate(multiplier) {
             // Get the input value
             const inputValue = document.getElementById('numInput').value;
