@@ -159,8 +159,18 @@
                 alert("Please enter a valid number first.");
                 return;
             }
-            if (inputAmmoShot === "" || inputAmmoShot > ammo || inputAmmoShot < "1") {
+            if (inputAmmoShot === "") {
                 alert("Please enter a valid number first.");
+                return;
+            }
+            else if (inputAmmoShot > ammo) {
+                alert("Please enter a valid number first.");
+                imputAmmoShot = ammo;
+                return;
+            }
+            else if (inputAmmoShot < "1") {
+                alert("Please enter a valid number first.");
+                imputAmmoShot = "1";
                 return;
             }
 
