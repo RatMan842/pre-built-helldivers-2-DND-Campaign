@@ -126,7 +126,7 @@
     </div>
 
     <div class="ammo-group">
-        <label for="ammoInput">Enter a number from 1 to <span id="output"></span>:</label>
+        <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
     </div>
     
@@ -165,7 +165,7 @@
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = number(inputAmmoShot);
+            const stepOne = Number(inputAmmoShot);
             const stepTwo = Number(inputValue) / 20;
             const finalResult = stepOne * stepTwo * multiplier;
 
