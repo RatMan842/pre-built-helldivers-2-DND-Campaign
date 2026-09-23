@@ -3,78 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplication Calculator</title>
+    <title>Button Multiplier</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 50px;
+            margin: 40px;
+            max-width: 400px;
         }
-        .calculator {
-            max-width: 300px;
+        .container {
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
+            background-color: #f9f9f9;
         }
-        label, input, button {
-            display: block;
-            width: 100%;
-            margin-bottom: 15px;
-            box-sizing: border-box;
+        .btn-group {
+            margin: 15px 0;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #007BFF;
+            background-color: white;
+            color: #007BFF;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #007BFF;
+            color: white;
         }
         input {
             padding: 8px;
-        }
-        button {
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
         }
         .result {
+            margin-top: 20px;
+            font-size: 18px;
             font-weight: bold;
-            font-size: 1.2em;
             color: #333;
         }
     </style>
 </head>
 <body>
 
-<div class="calculator">
-    <h3>Calculator</h3>
+<div class="container">
+    <h3>Multiplier Calculator</h3>
     
-    <label for="baseNumber">Base Number:</label>
-    <input type="number" id="baseNumber" value="10">
+    <!-- Step 1: User enters the input value -->
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" value="100" placeholder="Type a number...">
 
-    <label for="multiplierInput">Input Multiplier:</label>
-    <input type="number" id="multiplierInput" value="5">
+    <!-- Step 2: User clicks a button to pick a multiplier -->
+    <p>Pick a multiplier button:</p>
+    <div class="btn-group">
+        <button onclick="calculate(990)">liberator</button>
+        <button onclick="calculate(990)">STA-52 AR</button>
+        <button onclick="calculate(990)">Defender</button>
+        <button onclick="calculate(990)">Dilligence</button>
+        <button onclick="calculate(810)">Punisher</button>
+        <button onclick="calculate(750)">Sickle</button>
+    </div>
 
-    <button onclick="calculate()">Multiply by (Input / 20)</button>
-
-    <div class="result">Result: <span id="output">0</span></div>
+    <!-- Step 3: The result is displayed here -->
+    <div class="result" id="output">Result: 0</div>
 </div>
 
 <script>
-function calculate() {
-    // 1. Get the values from the input fields
-    const base = parseFloat(document.getElementById('baseNumber').value);
-    const inputVal = parseFloat(document.getElementById('multiplierInput').value);
+function calculate(buttonValue) {
+    // 1. Get the current value from the input field
+    const inputValue = parseFloat(document.getElementById('numberInput').value);
 
-    // 2. Check if the inputs are valid numbers
-    if (isNaN(base) || !isNaN(inputVal) === false) {
-        document.getElementById('output').innerText = "Please enter valid numbers";
+    // 2. Validate that the input is a valid number
+    if (isNaN(inputValue)) {
+        document.getElementById('output').innerText = "Please enter a valid number first.";
         return;
     }
 
-    // 3. Perform the math logic: Base * (Input / 20)
-    const result = base * (inputVal / 20);
+    // 3. Perform the math logic: buttonValue * (inputValue / 20)
+    const finalResult = buttonValue * (inputValue / 20);
 
-    // 4. Display the result, rounding to 4 decimal places if necessary
-    document.getElementById('output').innerText = Number(result.toFixed(4));
+    // 4. Display the result on the page, rounding to 2 decimal places if needed
+    document.getElementById('output').innerText = `Result: ${finalResult}`;
 }
 </script>
 
