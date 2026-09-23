@@ -284,7 +284,7 @@
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = Number(inputAmmoShot) * ap;
+            const stepOne = Number(inputAmmoShot) * Number(ap);
             const stepTwo = Number(inputValue) / 15;
             const finalResult = stepOne * stepTwo * multiplier;
 
@@ -318,7 +318,7 @@
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = Number(inputAmmoShot2) * ap2;
+            const stepOne = Number(inputAmmoShot2) * Number(ap2);
             const stepTwo = Number(inputValue2) / 15;
             const finalResult = stepOne * stepTwo * multiplier;
 
