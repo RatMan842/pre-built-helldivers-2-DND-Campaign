@@ -81,43 +81,44 @@
         <label>Primary Weapon:</label>
             <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
-        <button data-tag="ar" onclick="calculate(990), updateAmmo('11')">liberator</button>
-        <button data-tag="ar" onclick="calculate(990), updateAmmo('11')">STA-52 AR</button>
-        <button data-tag="ar" onclick="calculate(715), updateAmmo('11')">liberator penetrator</button>
-        <button data-tag="ar" onclick="calculate(855), updateAmmo('9')">adjudicator</button>
-        <button data-tag="ar" onclick="calculate(900), updateAmmo('10')">MA-5C AR</button>
-        <button data-tag="ar" onclick="calculate(525), updateAmmo('7')">Liberator concussive</button>
-        <button data-tag="ar" onclick="calculate(1120), updateAmmo('14')">supressor</button>
-        <button data-tag="ar" onclick="calculate(605), updateAmmo('11')">pacifier</button>
-        <button data-tag="ar" onclick="calculate(1260), updateAmmo('')">tenderizer</button>
-        <button data-tag="ar" onclick="calculate(1350), updateAmmo('')">liberator carbine</button>
-        <button data-tag="ar" onclick="calculate(750), updateAmmo('')">coyote</button>
-        <button data-tag="ar" onclick="calculate(990), updateAmmo('')">AR/GL-21 One-Two(b) </button>
-        <button data-tag="ar" onclick="calculate(950), updateAmmo('')">AR/GL-21 One-Two(e) </button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">STA-52 AR</button>
+        <button data-tag="ar" onclick="calculate(65), updateAmmo('11')">liberator penetrator</button>
+        <button data-tag="ar" onclick="calculate(95), updateAmmo('9')">adjudicator</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('10')">MA-5C AR</button>
+        <button data-tag="ar" onclick="calculate(75), updateAmmo('7')">Liberator concussive</button>
+        <button data-tag="ar" onclick="calculate(80), updateAmmo('14')">supressor</button>
+        <button data-tag="ar" onclick="calculate(55), updateAmmo('11')">pacifier</button>
+        <button data-tag="ar" onclick="calculate(105), updateAmmo('13')">tenderizer(f)</button>
+        <button data-tag="ar" onclick="calculate(105), updateAmmo('10')">tenderizer(s)</button>
+        <button data-tag="ar" onclick="calculate(90), updateAmmo('15')">liberator carbine</button>
+        <button data-tag="ar" onclick="calculate(75), updateAmmo('10')">coyote</button>
+        <button data-tag="ar" onclick="calculate(95), updateAmmo('10')">AR/GL-21 One-Two(b) </button>
+        <button data-tag="ar" onclick="calculate(650), updateAmmo('1')">AR/GL-21 One-Two(e) </button>
             </div>
             <div>
         <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
-        <button data-tag="mr" onclick="calculate(990)">Dilligence</button>
-        <button data-tag="mr" onclick="calculate(990)">R-2124 Constitution</button>
-        <button data-tag="mr" onclick="calculate(990)">R-2 Amendment</button>
-        <button data-tag="mr" onclick="calculate(990)">R-72 Censor</button>
-        <button data-tag="mr" onclick="calculate(990)">R-63CS Diligence Counter Sniper</button>
-        <button data-tag="mr" onclick="calculate(990)">R-6 Deadeye</button>
+        <button data-tag="mr" onclick="calculate(165), updateAmmo('6')">Dilligence</button>
+        <button data-tag="mr" onclick="calculate(180), updateAmmo('1')">R-2124 Constitution</button>
+        <button data-tag="mr" onclick="calculate(200), updateAmmo('8')">R-2 Amendment</button>
+        <button data-tag="mr" onclick="calculate(165), updateAmmo('7')">R-72 Censor</button>
+        <button data-tag="mr" onclick="calculate(200), updateAmmo('6')">R-63CS Diligence Counter Sniper</button>
+        <button data-tag="mr" onclick="calculate(300), updateAmmo('2')">R-6 Deadeye</button>
             </div>
             <div>
         <label  style="color: #FF0000"; data-tag="indent">Submachine Guns</label><br>
-        <button data-tag="smg" onclick="calculate(990)">Defender</button>
+        <button data-tag="smg" onclick="calculate(110), updateAmmo('9')">Defender</button>
             </div>
             <div>
         <label  style="color: #100000"; data-tag="indent">Shotguns</label><br>
-        <button data-tag="sg" onclick="calculate(810)">Punisher</button>
+        <button data-tag="sg" onclick="calculate(405), updateAmmo('2')">Punisher</button>
             </div>
             <div>
         <label  style="color: #008000"; data-tag="indent">Explosive</label><br>
             </div>
             <div>
         <label  style="color: #FFFF00"; data-tag="indent">Energy-Based</label><br>
-        <button data-tag="las" onclick="calculate(750)">Sickle</button>
+        <button data-tag="las" onclick="calculate(60), updateAmmo('12')">Sickle</button>
             </div>
             <div>
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
@@ -125,8 +126,8 @@
     </div>
 
     <div class="ammo-group">
-        <label for="numInput">Enter a number from 1 to <span id="output"></span>:</label>
-        <input type="number" id="numInput" value="20" placeholder="Type a number...">
+        <label for="ammoInput">Enter a number from 1 to <span id="output"></span>:</label>
+        <input type="number" id="ammoInput" value="20" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
@@ -141,26 +142,32 @@
     </div>
 
     <script>
-        let ammo = "45";
+        let ammo = "11";
         function updateAmmo(newValue) {
-          ammo = newValue; // Assigns the new value to the let variable
-          console.log(selectedValue); // Checks the value in the console
+          ammo = newValue;// Assigns the new value to the let variable
+          console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("output").innerText = selectedValue;
+          document.getElementById("output").innerText = ammo;
         }
-        function calculate(multiplier) {
+        function calculate(damage) {
             // Get the input value
             const inputValue = document.getElementById('numInput').value;
+            const inputAmmoShot = document.getElementById('ammoInput').value;
             
             // Validate that the input is a valid number
-            if (inputValue === "") {
+            if (inputValue === "" || inputValue > "20" || inputValue < "1") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            if (inputAmmoShot === "" || inputAmmoShot > ammo || inputAmmoShot < "1") {
                 alert("Please enter a valid number first.");
                 return;
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = Number(inputValue) / 20;
-            const finalResult = stepOne * multiplier;
+            const stepOne = number(inputAmmoShot) * damage;
+            const stepTwo = Number(inputValue) / 20;
+            const finalResult = stepOne * stepTwo;
 
             // Display the result on the webpage
             document.getElementById('resultValue').innerText = finalResult;
