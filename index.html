@@ -149,7 +149,7 @@
           // Updates the HTML to show the current variable value
           document.getElementById("output").innerText = ammo;
         }
-        function calculate(damage) {
+        function calculate(multiplier) {
             // Get the input value
             const inputValue = document.getElementById('numInput').value;
             const inputAmmoShot = document.getElementById('ammoInput').value;
@@ -165,7 +165,7 @@
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = number(inputAmmoShot) * damage;
+            const stepOne = number(inputAmmoShot) * multiplier;
             const stepTwo = Number(inputValue) / 20;
             const finalResult = stepOne * stepTwo;
 
