@@ -89,8 +89,7 @@
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
          <div class="aligner">
-             <label>Primary Weapon:</label>
-    <div style="data-tag:'indentx'"; class="ammo-group">
+    <div class="ammo-group">
         <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
     </div>
@@ -106,6 +105,7 @@
         Result: <strong id="resultValue">0</strong>
     </div>
     </div>
+        <label>Primary Weapon:</label>
             <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
@@ -159,6 +159,30 @@
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
             </div>
     </div>
+    <div>
+        <h2>Calculator2</h2>
+
+    <!-- Step 2: Multiplier Buttons -->
+    <div class="button-group">
+         <div class="aligner">
+    <div class="ammo-group">
+        <label for="ammoInput2">Enter a number (max is <span id="output2"></span>):</label>
+        <input type="number" id="ammoInput2" value="1" placeholder="Type a number...">
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput2">Enter a number:</label>
+        <input type="number" id="numInput2" value="20" placeholder="Type a number...">
+    </div>
+    
+    <!-- Step 3: Display Result -->
+    <div id="result-box">
+        Result: <strong id="resultValue2">0</strong>
+    </div>
+    </div>
+        <label>Secondary Weapon:</label>
+    </div>
     <script>
         let ammo = "11";
         function updateAmmo(newValue) {
@@ -199,6 +223,39 @@
 
             // Display the result on the webpage
             document.getElementById('resultValue').innerText = finalResult;
+        }
+        function calculate2(multiplier) {
+            // Get the input value
+            const inputValue2 = document.getElementById('numInput2').value;
+            const inputAmmoShot2 = document.getElementById('ammoInput2').value;
+            
+            // Validate that the input is a valid number
+            if (inputValue2 === "" || inputValue2 > "20" || inputValue2 < "1") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            if (inputAmmoShot2 === "") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            else if (inputAmmoShot2 > ammo2) {
+                alert("Please enter a valid number first.");
+                imputAmmoShot2 = ammo2;
+                return;
+            }
+            else if (inputAmmoShot2 < "1") {
+                alert("Please enter a valid number first.");
+                imputAmmoShot2 = "1";
+                return;
+            }
+
+            // Perform the logic: (Input / 20) * Multiplier
+            const stepOne = Number(inputAmmoShot2);
+            const stepTwo = Number(inputValue2) / 20;
+            const finalResult = stepOne * stepTwo * multiplier;
+
+            // Display the result on the webpage
+            document.getElementById('resultValue2').innerText = finalResult;
         }
     </script>
 
