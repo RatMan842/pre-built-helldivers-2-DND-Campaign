@@ -13,49 +13,10 @@
         .input-group, .button-group, .ammo-group {
             margin-bottom: 20px;
         }
-        .dropdown {
-          position: relative;
-          display: inline-block;
-        }
-
-        .dropbtn {
-          background-color: #3498db;
-          color: white;
-          padding: 10px 16px;
-          font-size: 16px;
-          border: none;
-          cursor: pointer;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f1f1f1;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-          z-index: 1;
-        }
-
-        /* Stack the revealed buttons vertically */
-        .dropdown-content button {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          width: 100%;
-          border: none;
-          background: none;
-          text-align: left;
-          cursor: pointer;
-        }
-
-        .dropdown-content button:hover {
-          background-color: #ddd;
-        }
-
-        /* Shown by JavaScript */
-        .show {
-          display: block;
+        .aligner {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: center;   /* Vertically centers all objects on this line */
+          gap: 15px;             /* Adds clean spacing between the objects */
         }
         
         button[data-tag="ar"] {
@@ -123,10 +84,8 @@
 
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
-        <label>Primary Weapon:</label>
-            <div class="dropdown">
-        <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
-          <div id="myDropdown" class="dropdown-content">
+        <label class="aligner">Primary Weapon:</label>
+            <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">STA-52 AR</button>
@@ -142,8 +101,7 @@
         <button data-tag="ar" onclick="calculate(75), updateAmmo('10')">coyote</button>
         <button data-tag="ar" onclick="calculate(95), updateAmmo('10')">AR/GL-21 One-Two(b) </button>
         <button data-tag="ar" onclick="calculate(650), updateAmmo('1')">AR/GL-21 One-Two(e) </button>
-            </div>
-          </div>
+            </div>    
             <div>
         <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
         <button data-tag="mr" onclick="calculate(165), updateAmmo('6')">Dilligence</button>
@@ -180,7 +138,7 @@
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
             </div>
     </div>
-
+    <div class="aligner">
     <div class="ammo-group">
         <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
@@ -196,7 +154,7 @@
     <div id="result-box">
         Result: <strong id="resultValue">0</strong>
     </div>
-
+    </div>
     <script>
         let ammo = "11";
         function updateAmmo(newValue) {
@@ -204,22 +162,6 @@
           console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output").innerText = ammo;
-        }
-        function toggleDropdown() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (var i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
         }
         function calculate(multiplier) {
             // Get the input value
