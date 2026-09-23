@@ -48,7 +48,7 @@
             padding: 10px 15px;
             margin-right: 5px;
             margin-bottom: 5px;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
             border: 1px solid #ccc;
             background-color: #f0f0f0;
@@ -165,9 +165,9 @@
             }
 
             // Perform the logic: (Input / 20) * Multiplier
-            const stepOne = number(inputAmmoShot) * multiplier;
+            const stepOne = number(inputAmmoShot);
             const stepTwo = Number(inputValue) / 20;
-            const finalResult = stepOne * stepTwo;
+            const finalResult = stepOne * stepTwo * multiplier;
 
             // Display the result on the webpage
             document.getElementById('resultValue').innerText = finalResult;
