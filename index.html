@@ -45,6 +45,10 @@
             display: inline-block; /* Allows margins/padding to work correctly */
             padding-left: 50px;    /* Indents the text from the left */
         }
+        label[data-tag="indentx"] {
+            display: inline-block; /* Allows margins/padding to work correctly */
+            padding-left: 150px;    /* Indents the text from the left */
+        }
         label {
             display: block;
             margin-bottom: 8px;
@@ -86,7 +90,7 @@
     <div class="button-group">
          <div class="aligner">
              <label>Primary Weapon:</label>
-    <div class="ammo-group">
+    <div data-tag="indentx"; class="ammo-group">
         <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
     </div>
