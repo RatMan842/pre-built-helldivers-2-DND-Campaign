@@ -183,7 +183,7 @@
     </div>
         <label>Secondary Weapon:</label>
         <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo('15')">Peacemaker</button>
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')">Peacemaker</button>
     </div>
     <script>
         let ammo = "11";
@@ -192,6 +192,13 @@
           console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output").innerText = ammo;
+        }
+        let ammo2 = "5";
+        function updateAmmo2(newValue) {
+          ammo2 = newValue;// Assigns the new value to the let variable
+          console.log(ammo); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("output2").innerText = ammo2;
         }
         function calculate(multiplier) {
             // Get the input value
