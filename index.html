@@ -84,7 +84,24 @@
 
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
-        <label class="aligner">Primary Weapon:</label>
+         <div class="aligner">
+             <label>Primary Weapon:</label>
+    <div class="ammo-group">
+        <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
+        <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput">Enter a number:</label>
+        <input type="number" id="numInput" value="20" placeholder="Type a number...">
+    </div>
+    
+    <!-- Step 3: Display Result -->
+    <div id="result-box">
+        Result: <strong id="resultValue">0</strong>
+    </div>
+    </div>
             <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')">liberator</button>
@@ -137,23 +154,6 @@
             <div>
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
             </div>
-    </div>
-    <div class="aligner">
-    <div class="ammo-group">
-        <label for="ammoInput">Enter a number (max is <span id="output"></span>):</label>
-        <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
-    </div>
-    
-        <!-- Step 1: User Input -->
-    <div class="input-group">
-        <label for="numInput">Enter a number:</label>
-        <input type="number" id="numInput" value="20" placeholder="Type a number...">
-    </div>
-    
-    <!-- Step 3: Display Result -->
-    <div id="result-box">
-        Result: <strong id="resultValue">0</strong>
-    </div>
     </div>
     <script>
         let ammo = "11";
