@@ -23,6 +23,16 @@
           align-items: center;   /* Vertically centers all objects on this line */
           gap: 7px;             /* Adds clean spacing between the objects */
         }
+        .aligner3 {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: center;   /* Vertically centers all objects on this line */
+          gap: 7px;             /* Adds clean spacing between the objects */
+        }
+        .alignerAll {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: center;   /* Vertically centers all objects on this line */
+          gap: 15px;             /* Adds clean spacing between the objects */
+        }
         /* Base button styles */
     .my-button {
     }
@@ -57,6 +67,9 @@
         }
         button[data-tag="sp"] {
             background-color: #0000FF; /* blue */
+        }
+        button[data-tag="spc"] {
+            background-color: #FF00AA; /* pink */
         }
         label[data-tag="indent"] {
             display: inline-block; /* Allows margins/padding to work correctly */
@@ -100,7 +113,7 @@
     </style>
 </head>
 <body>
-
+<div class="alignerAll">
     <h2>Calculator</h2>
 
     <!-- Step 2: Multiplier Buttons -->
@@ -235,6 +248,74 @@
         <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
         <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
+    
+    <div>
+        <label>Secondary Weapon:</label>
+            <div>
+        <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">P-2 Peacemaker</button>
+        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">P-19 Redeemer</button>
+        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
+        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
+        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
+        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
+        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
+            </div>
+            <div>
+        <label  style="color: #00a6ff"; data-tag="indent">melee</label><br>
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">CQC-2 Saber</button>
+        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">CQC-73 Entrenchment Tool</button>
+        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
+        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
+        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
+        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
+        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
+            </div>
+    </div>
+    </div>
+            <h2>Calculator3</h2>
+
+    <!-- Step 2: Multiplier Buttons -->
+    <div class="button-group">
+         <div class="aligner">
+    <div class="ammo-group">
+        <label for="ammoInput3">Enter a number (max is <span id="output3"></span>):</label>
+        <input type="number" id="ammoInput3" value="1" placeholder="Type a number...">
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput3">Enter a number:</label>
+        <input type="number" id="numInput3" value="15" placeholder="Type a number...">
+    </div>
+
+     <div id="ap-group">
+         <label>is the Ap of the weapon:</label>
+         <div class="aligner3">
+         <button onclick="updateAP3('0')">less</button>
+         <button onclick="updateAP3('0.6')">the same</button>
+         <button onclick="updateAP3('1')">higher</button>
+         </div>
+    </div>
+    <!-- Step 3: Display Result -->
+    <div id="result-box">
+        Result: <strong id="resultValue3">0</strong>
+    </div>
+    </div>
+    <div>
+        <label>Support Weapon:</label>
+            <div>
+        <label  style="color: #FF00AA"; data-tag="indent">Weapons</label><br>
+        <button data-tag="spc" onclick="calculate3(100), updateAmmo3('15')"; class="my-button">P-2 Peacemaker</button>
+        <button data-tag="spc" onclick="calculate3(70), updateAmmo3('18')"; class="my-button">P-19 Redeemer</button>
+        <button data-tag="spc" onclick="calculate3(105), updateAmmo3('12')"; class="my-button">P-69 Veto</button>	
+        <button data-tag="spc" onclick="calculate3(125), updateAmmo3('12')"; class="my-button">M6C/SOCOM Pistol</button>
+        <button data-tag="spc" onclick="calculate3(140), updateAmmo3('7')"; class="my-button">P-112 Verdict</button>
+        <button data-tag="spc" onclick="calculate3(80), updateAmmo3('7')"; class="my-button">P-92 Warrant</button>		
+        <button data-tag="spc" onclick="calculate3(225), updateAmmo3('3')"; class="my-button">P-4 Senator</button>	
+            </div>
+    </div>
+    </div>
     </div>
     <script>
         let ap = "1";
@@ -251,6 +332,13 @@
           // Updates the HTML to show the current variable value
           document.getElementById("APoutput2").innerText = ap2;
         }
+        let ap3 = "1";
+        function updateAP3(newValue) {
+          ap3 = newValue;// Assigns the new value to the let variable
+          console.log(ap3); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("APoutput3").innerText = ap3;
+        }
         let ammo = "11";
         function updateAmmo(newValue) {
           ammo = newValue;// Assigns the new value to the let variable
@@ -264,6 +352,13 @@
           console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output2").innerText = ammo2;
+        }
+        let ammo3 = "1";
+        function updateAmmo3(newValue) {
+          ammo3 = newValue;// Assigns the new value to the let variable
+          console.log(ammo); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("output3").innerText = ammo3;
         }
         function calculate(multiplier) {
             // Get the input value
@@ -331,7 +426,41 @@
             const finalResult = stepOne * stepTwo * multiplier;
 
             // Display the result on the webpage
-            document.getElementById('resultValue2').innerText = finalResult;
+            document.getElementById('resultValue3').innerText = finalResult;
+        }
+        function calculate2(multiplier) {
+            // Get the input value
+            const inputValue3 = document.getElementById('numInput3').value;
+            const inputAP3 = ap3;
+            const inputAmmoShot3 = document.getElementById('ammoInput3').value;
+            
+            // Validate that the input is a valid number
+            if (inputValue3 === "" || inputValue3 > "15" || inputValue3 < "1") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            if (inputAmmoShot3 === "") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            else if (inputAmmoShot3 > ammo3) {
+                alert("Please enter a valid number first.");
+                imputAmmoShot3 = ammo3;
+                return;
+            }
+            else if (inputAmmoShot3 < "1") {
+                alert("Please enter a valid number first.");
+                imputAmmoShot3 = "1";
+                return;
+            }
+
+            // Perform the logic: (Input / 20) * Multiplier
+            const stepOne = Number(inputAmmoShot3) * Number(ap3);
+            const stepTwo = Number(inputValue3) / 15;
+            const finalResult = stepOne * stepTwo * multiplier;
+
+            // Display the result on the webpage
+            document.getElementById('resultValue3').innerText = finalResult;
         }
     // Select all buttons
     const buttons = document.querySelectorAll('.my-button');
