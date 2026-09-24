@@ -73,6 +73,9 @@
         button[data-tag="spc"] {
             background-color: #FF00AA; /* pink */
         }
+        button[data-tag="spe"] {
+            background-color: #AA00FF; /* purple */
+        }
         label[data-tag="indent"] {
             display: inline-block; /* Allows margins/padding to work correctly */
             padding-left: 50px;    /* Indents the text from the left */
@@ -245,14 +248,12 @@
         <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
             <div>
-        <label  style="color: #00AAFF;" data-tag="indent">melee</label><br>
-        <button data-tag="me" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">CQC-2 Saber</button>
-        <button data-tag="me" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">CQC-73 Entrenchment Tool</button>
-        <button data-tag="me" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
-        <button data-tag="me" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
-        <button data-tag="me" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
-        <button data-tag="me" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
-        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-2 Saber</button>
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-73 Entrenchment Tool</button>
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-19 Stun Lance</button>
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-30 Stun Baton</button>
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-5 Combat Hatchet</button>
+        <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">CQC-42 Machete</button>
             </div>
     </div>
     </div>
@@ -290,14 +291,30 @@
         </div>
         <label>Support Weapon:</label>
             <div>
-        <label  style="color: #FF00AA;" data-tag="indent">Weapons</label><br>
-        <button data-tag="spc" onclick="calculate3(100), updateAmmo3('15')"; class="my-button">P-2 Peacemaker</button>
-        <button data-tag="spc" onclick="calculate3(70), updateAmmo3('18')"; class="my-button">P-19 Redeemer</button>
-        <button data-tag="spc" onclick="calculate3(105), updateAmmo3('12')"; class="my-button">P-69 Veto</button>	
-        <button data-tag="spc" onclick="calculate3(125), updateAmmo3('12')"; class="my-button">M6C/SOCOM Pistol</button>
-        <button data-tag="spc" onclick="calculate3(140), updateAmmo3('7')"; class="my-button">P-112 Verdict</button>
-        <button data-tag="spc" onclick="calculate3(80), updateAmmo3('7')"; class="my-button">P-92 Warrant</button>		
-        <button data-tag="spc" onclick="calculate3(225), updateAmmo3('3')"; class="my-button">P-4 Senator</button>	
+        <label  style="color: #FF00AA;" data-tag="indent">Guns</label><br>
+        <button data-tag="spc" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">MG-43 Machine gun</button>
+        <button data-tag="spc" onclick="calculate3(450), updateAmmo3('6')"; class="my-button">APW-1 Anti-material rifle</button>
+        <button data-tag="spc" onclick="calculate3(90), updateAmmo3('19')"; class="my-button">M-105 Stalwart</button>
+        <button data-tag="spc" onclick="calculate3(150), updateAmmo3('12')"; class="my-button">MG-206 Heavy machine gun</button>
+        <button data-tag="spc" onclick="calculate3(100), updateAmmo3('21')"; class="my-button">MGX-42 Bullet storm</button>
+            </div>
+            <div>
+        <label  style="color: #FFFF00;" data-tag="indent">Energy-Based</label><br>
+        <button data-tag="las" onclick="calculate3(70), updateAmmo3('5')"; class="my-button">LAS-98 Laser cannon</button>
+            </div>
+            <div>
+        <label  style="color: #FF9900;" data-tag="indent">Explosive</label><br>
+        <button data-tag="ar" onclick="calculate3(2000), updateAmmo3('1')"; class="my-button">EAT-017 Expendable anti tank</button>
+        <button data-tag="ar" onclick="calculate3(400), updateAmmo3('2')"; class="my-button">GL-21 Grenade launcher</button>
+        <button data-tag="ar" onclick="calculate3(3200), updateAmmo3('1')"; class="my-button">GR-8 Recoilless rifle</button>
+        <button data-tag="ar" onclick="calculate3(325), updateAmmo3('3')"; class="my-button">AC-8 Autocannon</button>
+            </div>
+            <div>
+        <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
+        <button data-tag="spe" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">LAS-98 Laser cannon</button>
+        <button data-tag="spe" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">FLAM-40 Flamethrower</button>
+        <button data-tag="spe" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">TX-41 Sterilizer</button>
+        <button data-tag="spe" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">CQC-1 One true flag</button>
             </div>
     </div>
     </div>
