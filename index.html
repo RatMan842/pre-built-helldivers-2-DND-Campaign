@@ -115,6 +115,7 @@
     </style>
 </head>
 <body>
+        <div style="display: flex; justify-content: space-between; vertical-align: top;">
     <div>
     <h2>Calculator</h2>
     </div>
@@ -144,9 +145,9 @@
     <div id="result-box">
         Result: <strong id="resultValue">0</strong>
     </div>
-    </div>
+    <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Primary Weapon:</label>
-            <div style="max-width: 800px; width: 100%; margin: 0 auto;">
+            <div>
         <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">liberator</button>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">STA-52 AR</button>
@@ -199,7 +200,8 @@
         <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
             </div>
     </div>
-    <div>
+         </div>
+    </div>
         <h2>Calculator2</h2>
 
     <!-- Step 2: Multiplier Buttons -->
@@ -228,7 +230,7 @@
     <div id="result-box">
         Result: <strong id="resultValue2">0</strong>
     </div>
-    </div>
+    <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Secondary Weapon:</label>
             <div>
         <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
@@ -250,6 +252,7 @@
         <button data-tag="me" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
         <button data-tag="me" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
+    </div>
     </div>
 </div>
             <h2>Calculator3</h2>
@@ -281,7 +284,7 @@
         Result: <strong id="resultValue3">0</strong>
     </div>
     </div>
-    <div>
+    <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Support Weapon:</label>
             <div>
         <label  style="color: #FF00AA"; data-tag="indent">Weapons</label><br>
@@ -293,6 +296,7 @@
         <button data-tag="spc" onclick="calculate3(80), updateAmmo3('7')"; class="my-button">P-92 Warrant</button>		
         <button data-tag="spc" onclick="calculate3(225), updateAmmo3('3')"; class="my-button">P-4 Senator</button>	
             </div>
+    </div>
     </div>
     </div>
     <script>
