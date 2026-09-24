@@ -117,8 +117,8 @@
 <body>
         <div style="display: flex; justify-content: space-between; vertical-align: top;">
     <div>
+        <div style="flex-direction: column; align-items: flex-start;">
     <h2>Calculator</h2>
-    </div>
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
          <div class="aligner">
@@ -202,13 +202,15 @@
     </div>
          </div>
     </div>
+    </div>
+            <div style="flex-direction: column; align-items: flex-start;">
         <h2>Calculator2</h2>
 
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
          <div class="aligner">
     <div class="ammo-group">
-        <label for="ammoInput2">Bullets(max <span id="output2"></span>):</label>
+        <label for="ammoInput2">Bullets (max <span id="output2"></span>):</label>
         <input type="number" id="ammoInput2" value="1" placeholder="Type a number...">
     </div>
     
@@ -255,13 +257,15 @@
     </div>
     </div>
 </div>
+            </div>
+            <div style="flex-direction: column; align-items: flex-start;">
             <h2>Calculator3</h2>
 
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
          <div class="aligner">
     <div class="ammo-group">
-        <label for="ammoInput3">Bullets(max <span id="output3"></span>):</label>
+        <label for="ammoInput3">Bullets (max <span id="output3"></span>):</label>
         <input type="number" id="ammoInput3" value="1" placeholder="Type a number...">
     </div>
     
@@ -299,6 +303,7 @@
     </div>
     </div>
     </div>
+        </div>
     <script>
         let ap = "1";
         function updateAP(newValue) {
