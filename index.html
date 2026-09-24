@@ -23,8 +23,8 @@
           gap: 10px;             /* Adds clean spacing between the objects */
         }
         .aligner2 {
-          display: flex;         /* Turns the container into a flex line */
-          align-items: flex-start;   /* Vertically centers all objects on this line */
+          flex: 1;         /* Turns the container into a flex line */
+          height: 100%;   /* Vertically centers all objects on this line */
           gap: 10px;             /* Adds clean spacing between the objects */
         }
         .aligner3 {
@@ -148,7 +148,7 @@
     <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Primary Weapon:</label>
             <div>
-        <label style ="color: #FF9900"; data-tag="indent">Assault Rifles</label><br>
+        <label style ="color: #FF9900;" data-tag="indent">Assault Rifles</label><br>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">liberator</button>
         <button data-tag="ar" onclick="calculate(90), updateAmmo('11')"; class="my-button">STA-52 AR</button>
         <button data-tag="ar" onclick="calculate(65), updateAmmo('11')"; class="my-button">liberator penetrator</button>
@@ -165,7 +165,7 @@
         <button data-tag="ar" onclick="calculate(650), updateAmmo('1')"; class="my-button">AR/GL-21 One-Two(e) </button>
             </div>    
             <div>
-        <label style="color: #48D1CC"; data-tag="indent">Marksman Rifles</label><br>
+        <label style="color: #48D1CC;" data-tag="indent">Marksman Rifles</label><br>
         <button data-tag="mr" onclick="calculate(165), updateAmmo('6')"; class="my-button">Dilligence</button>
         <button data-tag="mr" onclick="calculate(180), updateAmmo('1')"; class="my-button">R-2124 Constitution</button>
         <button data-tag="mr" onclick="calculate(200), updateAmmo('8')"; class="my-button">R-2 Amendment</button>
@@ -174,7 +174,7 @@
         <button data-tag="mr" onclick="calculate(300), updateAmmo('2')"; class="my-button">R-6 Deadeye</button>
             </div>
             <div>
-        <label  style="color: #FF0000"; data-tag="indent">Submachine Guns</label><br>
+        <label  style="color: #FF0000;" data-tag="indent">Submachine Guns</label><br>
         <button data-tag="smg" onclick="calculate(110), updateAmmo('9')"; class="my-button">Defender</button>
         <button data-tag="smg" onclick="calculate(85), updateAmmo('8')"; class="my-button">Pummeler</button>
         <button data-tag="smg" onclick="calculate(90), updateAmmo('10')"; class="my-button">M7S SMG</button>
@@ -186,18 +186,18 @@
         <button data-tag="smg" onclick="calculate(140), updateAmmo('98')"; class="my-button">Reprimand</button>
             </div>
             <div>
-        <label  style="color: #100000"; data-tag="indent">Shotguns</label><br>
+        <label  style="color: #100000;" data-tag="indent">Shotguns</label><br>
         <button data-tag="sg" onclick="calculate(405), updateAmmo('2')"; class="my-button">Punisher</button>
             </div>
             <div>
-        <label  style="color: #008000"; data-tag="indent">Explosive</label><br>
+        <label  style="color: #008000;" data-tag="indent">Explosive</label><br>
             </div>
             <div>
-        <label  style="color: #FFFF00"; data-tag="indent">Energy-Based</label><br>
+        <label  style="color: #FFFF00;" data-tag="indent">Energy-Based</label><br>
         <button data-tag="las" onclick="calculate(60), updateAmmo('12')"; class="my-button">Sickle</button>
             </div>
             <div>
-        <label  style="color: #0000FF"; data-tag="indent">Special</label><br>
+        <label  style="color: #0000FF;" data-tag="indent">Special</label><br>
             </div>
     </div>
          </div>
@@ -235,7 +235,7 @@
     <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Secondary Weapon:</label>
             <div>
-        <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
+        <label  style="color: #FF0000;" data-tag="indent">Pistols</label><br>
         <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">P-2 Peacemaker</button>
         <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">P-19 Redeemer</button>
         <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
@@ -245,7 +245,7 @@
         <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
             <div>
-        <label  style="color: #00AAFF"; data-tag="indent">melee</label><br>
+        <label  style="color: #00AAFF;" data-tag="indent">melee</label><br>
         <button data-tag="me" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">CQC-2 Saber</button>
         <button data-tag="me" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">CQC-73 Entrenchment Tool</button>
         <button data-tag="me" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
@@ -290,7 +290,7 @@
     <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <label>Support Weapon:</label>
             <div>
-        <label  style="color: #FF00AA"; data-tag="indent">Weapons</label><br>
+        <label  style="color: #FF00AA;" data-tag="indent">Weapons</label><br>
         <button data-tag="spc" onclick="calculate3(100), updateAmmo3('15')"; class="my-button">P-2 Peacemaker</button>
         <button data-tag="spc" onclick="calculate3(70), updateAmmo3('18')"; class="my-button">P-19 Redeemer</button>
         <button data-tag="spc" onclick="calculate3(105), updateAmmo3('12')"; class="my-button">P-69 Veto</button>	
