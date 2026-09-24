@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            width: fit-content;
+            max-width: 800;
         }
         .input-group, .button-group, .ammo-group, .ap-group {
             margin-bottom: 20px;
@@ -114,8 +114,9 @@
 </head>
 <body>
 <div class="alignerAll">
+    <div>
     <h2>Calculator</h2>
-
+    </div>
     <!-- Step 2: Multiplier Buttons -->
     <div class="button-group">
          <div class="aligner">
@@ -248,30 +249,6 @@
         <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
         <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
             </div>
-    
-    <div>
-        <label>Secondary Weapon:</label>
-            <div>
-        <label  style="color: #FF0000"; data-tag="indent">Pistols</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">P-2 Peacemaker</button>
-        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">P-19 Redeemer</button>
-        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
-        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
-        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
-        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
-        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
-            </div>
-            <div>
-        <label  style="color: #00a6ff"; data-tag="indent">melee</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">CQC-2 Saber</button>
-        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">CQC-73 Entrenchment Tool</button>
-        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
-        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
-        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
-        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
-        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
-            </div>
-    </div>
     </div>
             <h2>Calculator3</h2>
 
@@ -314,6 +291,7 @@
         <button data-tag="spc" onclick="calculate3(80), updateAmmo3('7')"; class="my-button">P-92 Warrant</button>		
         <button data-tag="spc" onclick="calculate3(225), updateAmmo3('3')"; class="my-button">P-4 Senator</button>	
             </div>
+    </div>
     </div>
     </div>
     </div>
