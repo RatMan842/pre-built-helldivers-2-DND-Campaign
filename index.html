@@ -32,6 +32,11 @@
           align-items: flex-start;   /* Vertically centers all objects on this line */
           gap: 10px;             /* Adds clean spacing between the objects */
         }
+        .aligner4 {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: flex-start;   /* Vertically centers all objects on this line */
+          gap: 10px;             /* Adds clean spacing between the objects */
+        }
         /* Base button styles */
     .my-button {
     }
@@ -75,6 +80,12 @@
         }
         button[data-tag="spe"] {
             background-color: #AA00FF; /* purple */
+        }
+        button[data-tag="thr"] {
+            background-color: #b2FF00; /* pink */
+        }
+        button[data-tag="spThr"] {
+            background-color: #FF0060; /* purple */
         }
         label[data-tag="indent"] {
             display: inline-block; /* Allows margins/padding to work correctly */
@@ -302,6 +313,49 @@
     </div>
 </div>
             <div style="flex-direction: column; align-items: flex-start;">
+        <h2>Calculator4</h2>
+
+    <!-- Step 2: Multiplier Buttons -->
+    <div class="button-group">
+         <div class="aligner4">
+    <div class="ammo-group">
+        <label for="ammoInput4">charges (max <span id="output4"></span>):</label>
+        <input type="number" id="ammoInput4" value="1" placeholder="Type a number...">
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput4">Nat (max 15):</label>
+        <input type="number" id="numInput4" value="15" placeholder="Type a number...">
+    </div>
+
+     <div id="ap-group">
+         <label>Weapon Ap is:</label>
+         <div class="aligner4">
+         <button onclick="updateAP4('0')">less</button>
+         <button onclick="updateAP4('0.6')">the same</button>
+         <button onclick="updateAP4('1')">higher</button>
+         </div>
+         </div>
+    </div>
+    <!-- Step 3: Display Result -->
+    <div style="max-width: 800px; width: 100%; margin: 0 auto;">
+        <div id="result-box">
+            Result: <strong id="resultValue4">0</strong>
+        </div>
+        <label>Throwable Weapons:</label>
+            <div>
+        <label  style="color: #FF0000;" data-tag="indent">Standard</label><br>
+        <button data-tag="thr" onclick="calculate4(100), updateAmmo4('15')"; class="my-button">P-2 Peacemaker</button>
+            </div>
+            <div>
+                <label  style="color: #00AAFF;" data-tag="indent">Special</label><br>
+        <button data-tag="spThr" onclick="calculate4(188), updateAmmo4('3')"; class="my-button">CQC-2 Saber</button>
+            </div>
+    </div>
+    </div>
+</div>
+            <div style="flex-direction: column; align-items: flex-start;">
             <h2>Calculator3</h2>
 
     <!-- Step 2: Multiplier Buttons -->
@@ -408,6 +462,13 @@
           // Updates the HTML to show the current variable value
           document.getElementById("APoutput3").innerText = ap3;
         }
+        let ap4 = "1";
+        function updateAP4(newValue) {
+          ap4 = newValue;// Assigns the new value to the let variable
+          console.log(ap4); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("APoutput4").innerText = ap4;
+        }
         let ammo = "11";
         function updateAmmo(newValue) {
           ammo = newValue;// Assigns the new value to the let variable
@@ -418,16 +479,23 @@
         let ammo2 = "5";
         function updateAmmo2(newValue) {
           ammo2 = newValue;// Assigns the new value to the let variable
-          console.log(ammo); // Checks the value in the console
+          console.log(ammo2); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output2").innerText = ammo2;
         }
         let ammo3 = "1";
         function updateAmmo3(newValue) {
           ammo3 = newValue;// Assigns the new value to the let variable
-          console.log(ammo); // Checks the value in the console
+          console.log(ammo3); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output3").innerText = ammo3;
+        }
+        let ammo4 = "1";
+        function updateAmmo4(newValue) {
+          ammo3 = newValue;// Assigns the new value to the let variable
+          console.log(ammo4); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("output4").innerText = ammo4;
         }
         function calculate(multiplier) {
             // Get the input value
@@ -530,6 +598,40 @@
 
             // Display the result on the webpage
             document.getElementById('resultValue3').innerText = finalResult;
+        }
+        function calculate4(multiplier) {
+            // Get the input value
+            const inputValue4 = document.getElementById('numInput4').value;
+            const inputAP4 = ap4;
+            const inputAmmoShot4 = document.getElementById('ammoInput4').value;
+            
+            // Validate that the input is a valid number
+            if (inputValue4 === "" || inputValue4 > "15" || inputValue4 < "1") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            if (inputAmmoShot4 === "") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            else if (inputAmmoShot4 > ammo4) {
+                alert("Please enter a valid number first.");
+                imputAmmoShot4 = ammo4;
+                return;
+            }
+            else if (inputAmmoShot4 < "1") {
+                alert("Please enter a valid number first.");
+                imputAmmoShot4 = "1";
+                return;
+            }
+
+            // Perform the logic: (Input / 20) * Multiplier
+            const stepOne = Number(inputAmmoShot4) * Number(ap4);
+            const stepTwo = Number(inputValue4) / 15;
+            const finalResult = stepOne * stepTwo * multiplier;
+
+            // Display the result on the webpage
+            document.getElementById('resultValue4').innerText = finalResult;
         }
     // Select all buttons
     const buttons = document.querySelectorAll('.my-button');
