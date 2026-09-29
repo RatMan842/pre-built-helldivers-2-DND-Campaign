@@ -162,7 +162,7 @@
     </div>
     <div class="passive-group">
         <label for="psInput"> +%:</label>
-        <input type="percent" id="psInput" value="0" placeholder="Type a number...">
+        <input type="number" id="psInput" value="0" placeholder="Type a number...">
     </div>
      <div id="ap-group">
          <label>Weapon AP is:</label>
@@ -279,7 +279,7 @@
     </div>
     <div class="passive-group">
         <label for="psInput2"> +%:</label>
-        <input type="percent" id="psInput2" value="0" placeholder="Type a number...">
+        <input type="number" id="psInput2" value="0" placeholder="Type a number...">
     </div>
      <div id="ap-group">
          <label>Weapon Ap is:</label>
@@ -347,11 +347,11 @@
         <!-- Step 1: User Input -->
     <div class="input-group">
         <label for="numInput4">Roll/15:</label>
-        <input type="number" id="numInput4" value="0" placeholder="Type a number...">
+        <input type="number" id="numInput4" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
         <label for="psInput4"> +%:</label>
-        <input type="percent" id="psInput4" value="0" placeholder="Type a number...">
+        <input type="number" id="psInput4" value="0" placeholder="Type a number...">
     </div>
      <div id="ap-group">
          <label>Weapon Ap is:</label>
@@ -418,7 +418,7 @@
     </div>
     <div class="passive-group">
         <label for="psInput3"> +%:</label>
-        <input type="percent" id="psInput3" value="0" placeholder="Type a number...">
+        <input type="number" id="psInput3" value="0" placeholder="Type a number...">
     </div>
      <div id="ap-group">
          <label>Weapon AP is:</label>
@@ -578,7 +578,7 @@
             const inputValue = document.getElementById('numInput').value;
             const inputAP = ap;
             const inputAmmoShot = document.getElementById('ammoInput').value;
-            const inputPS = ps;
+            const inputPS = (ps/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue === "" || inputValue > "15" || inputValue < "1") {
@@ -603,7 +603,7 @@
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot) * Number(ap);
             const stepTwo = Number(inputValue) / 15;
-            const finalResult = stepOne * stepTwo * multiplier * Percent(inputPS);
+            const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS);
 
             // Display the result on the webpage
             document.getElementById('resultValue').innerText = finalResult;
@@ -613,7 +613,7 @@
             const inputValue2 = document.getElementById('numInput2').value;
             const inputAP2 = ap2;
             const inputAmmoShot2 = document.getElementById('ammoInput2').value;
-            const inputPS2 = ps2;
+            const inputPS2 = (ps2/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue2 === "" || inputValue2 > "15" || inputValue2 < "1") {
@@ -638,7 +638,7 @@
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot2) * Number(ap2);
             const stepTwo = Number(inputValue2) / 15;
-            const finalResult = stepOne * stepTwo * multiplier * Percent(inputPS2);
+            const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS2);
 
             // Display the result on the webpage
             document.getElementById('resultValue2').innerText = finalResult;
@@ -648,7 +648,7 @@
             const inputValue3 = document.getElementById('numInput3').value;
             const inputAP3 = ap3;
             const inputAmmoShot3 = document.getElementById('ammoInput3').value;
-            const inputPS3 = ps3;
+            const inputPS3 = (ps/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue3 === "" || inputValue3 > "15" || inputValue3 < "1") {
@@ -673,7 +673,7 @@
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot3) * Number(ap3);
             const stepTwo = Number(inputValue3) / 15;
-            const finalResult = stepOne * stepTwo * multiplier * Percent(inputPS3);
+            const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS3);
 
             // Display the result on the webpage
             document.getElementById('resultValue3').innerText = finalResult;
@@ -683,7 +683,7 @@
             const inputValue4 = document.getElementById('numInput4').value;
             const inputAP4 = ap4;
             const inputAmmoShot4 = document.getElementById('ammoInput4').value;
-            const inputPS4 = ps4;
+            const inputPS4 = (ps/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue4 === "" || inputValue4 > "15" || inputValue4 < "1") {
