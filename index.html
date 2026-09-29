@@ -671,55 +671,35 @@
         }
     // Select all buttons
     const buttons = document.querySelectorAll('.my-button');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', function() {
-        // 1. Remove the active class from whichever button currently has it
-        document.querySelector('.my-button.active-clicked')?.classList.remove('active-clicked');
-        
-        // 2. Add the active class to the newly clicked button
-        this.classList.add('active-clicked');
-      });
-    });
         const buttons = document.querySelectorAll('.sec-button');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', function() {
-        // 1. Remove the active class from whichever button currently has it
-        document.querySelector('.sec-button.activ-clicked')?.classList.remove('active-clicked');
-        
-        // 2. Add the active class to the newly clicked button
-        this.classList.add('active-clicked');
-      });
-    });
         const buttons = document.querySelectorAll('.thr-button');
-
-    buttons.forEach(button => {
+        const buttons = document.querySelectorAll('.spt-button');
       button.addEventListener('click', function() {
-        // 1. Remove the active class from whichever button currently has it
-        document.querySelector('.thr-button.active-clicked')?.classList.remove('active-clicked');
-        
-        // 2. Add the active class to the newly clicked button
+        document.querySelectorAll('.my-button.active-clicked')
+        .forEach(btn.classList.remove('active-clicked'));
         this.classList.add('active-clicked');
       });
     });
-        const buttons = document.querySelectorAll('.spt-button');
-
-    buttons.forEach(button => {
       button.addEventListener('click', function() {
-        // 1. Remove the active class from whichever button currently has it
-        document.querySelector('.spt-button.active-clicked')?.classList.remove('active-clicked');
-        
-        // 2. Add the active class to the newly clicked button
+        document.querySelectorAll('.sec-button.active-clicked')
+        .forEach(btn.classList.remove('active-clicked'));
+        this.classList.add('active-clicked');
+      });
+    });
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.thr-button.active-clicked')
+        .forEach(btn.classList.remove('active-clicked'));
+        this.classList.add('active-clicked');
+      });
+    });
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.spt-button.active-clicked')
+        .forEach(btn.classList.remove('active-clicked'));
         this.classList.add('active-clicked');
       });
     });
         function setActive(button) {
-        const group = button.ClassList.contains("my-button") ? ".my-button":
-            const group = button.ClassList.contains("sec-button") ? ".sec-button":
-            const group = button.ClassList.contains("thr-button") ? ".thr-button":
-            ".spt-button";
-            document.querySelectorAll(group).forEach(btn => {
+        document.querySelectorAll('.my-button, .sec-button, .thr.button, .spt.button').forEach(btn => {
                 btn.classList.remove('active-clicked');
             });
             button.classList.add('active-clicked');
