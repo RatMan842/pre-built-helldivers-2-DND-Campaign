@@ -708,7 +708,7 @@
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot4) * Number(ap4);
             const stepTwo = Number(inputValue4) / 15;
-            const finalResult = stepOne * stepTwo * multiplier * Percent(inputPS4);
+            const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS4);
 
             // Display the result on the webpage
             document.getElementById('resultValue4').innerText = finalResult;
