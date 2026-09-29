@@ -38,11 +38,11 @@
           gap: 10px;             /* Adds clean spacing between the objects */
         }
         /* Base button styles */
-    .my-button {
+    .my-button, .sec-button, .thr-button, .spt-button{
     }
 
     /* Style applied only to the last clicked button */
-    .my-button.active-clicked {
+    .my-button.active-clicked, .sec-button.active-clicked, .thr-button.active-clicked, .spt-button.active-clicked {
       outline: 3px solid black;
     }
         button[data-tag="aligns"] {
@@ -276,38 +276,38 @@
         </div>
             <div>
         <label  style="color: #FF0000;" data-tag="indent">Pistols</label><br>
-        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="my-button">P-2 Peacemaker</button>
-        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="my-button">P-19 Redeemer</button>
-        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="my-button">P-69 Veto</button>	
-        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="my-button">M6C/SOCOM Pistol</button>
-        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="my-button">P-112 Verdict</button>
-        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="my-button">P-92 Warrant</button>		
-        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="my-button">P-4 Senator</button>	
+        <button data-tag="smg" onclick="calculate2(100), updateAmmo2('15')"; class="sec-button">P-2 Peacemaker</button>
+        <button data-tag="smg" onclick="calculate2(70), updateAmmo2('18')"; class="sec-button">P-19 Redeemer</button>
+        <button data-tag="smg" onclick="calculate2(105), updateAmmo2('12')"; class="sec-button">P-69 Veto</button>	
+        <button data-tag="smg" onclick="calculate2(125), updateAmmo2('12')"; class="sec-button">M6C/SOCOM Pistol</button>
+        <button data-tag="smg" onclick="calculate2(140), updateAmmo2('7')"; class="sec-button">P-112 Verdict</button>
+        <button data-tag="smg" onclick="calculate2(80), updateAmmo2('7')"; class="sec-button">P-92 Warrant</button>		
+        <button data-tag="smg" onclick="calculate2(225), updateAmmo2('3')"; class="sec-button">P-4 Senator</button>	
             </div>
             <div>
                 <label  style="color: #00AAFF;" data-tag="indent">melee</label><br>
-        <button data-tag="me" onclick="calculate2(188), updateAmmo2('3')"; class="my-button">CQC-2 Saber</button>
-        <button data-tag="me" onclick="calculate2(165), updateAmmo2('2')"; class="my-button">CQC-73 Entrenchment Tool</button>
-        <button data-tag="me" onclick="calculate2(185), updateAmmo2('2')"; class="my-button">CQC-19 Stun Lance</button>
-        <button data-tag="me" onclick="calculate2(140), updateAmmo2('3')"; class="my-button">CQC-30 Stun Baton</button>
-        <button data-tag="me" onclick="calculate2(240), updateAmmo2('2')"; class="my-button">CQC-5 Combat Hatchet</button>
-        <button data-tag="me" onclick="calculate2(300), updateAmmo2('2')"; class="my-button">CQC-42 Machete</button>
+        <button data-tag="me" onclick="calculate2(188), updateAmmo2('3')"; class="sec-button">CQC-2 Saber</button>
+        <button data-tag="me" onclick="calculate2(165), updateAmmo2('2')"; class="sec-button">CQC-73 Entrenchment Tool</button>
+        <button data-tag="me" onclick="calculate2(185), updateAmmo2('2')"; class="sec-button">CQC-19 Stun Lance</button>
+        <button data-tag="me" onclick="calculate2(140), updateAmmo2('3')"; class="sec-button">CQC-30 Stun Baton</button>
+        <button data-tag="me" onclick="calculate2(240), updateAmmo2('2')"; class="sec-button">CQC-5 Combat Hatchet</button>
+        <button data-tag="me" onclick="calculate2(300), updateAmmo2('2')"; class="sec-button">CQC-42 Machete</button>
             </div>
         <div>
                 <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
-        <button data-tag="spe" onclick="calculate2(6), updateAmmo2('42')"; class="my-button">Dagger</button>
-        <button data-tag="spe" onclick="calculate2(405), updateAmmo2('3')"; class="my-button">Bushwhacker</button>
-        <button data-tag="spe" onclick="calculate2(60), updateAmmo2('2')"; class="my-button">Re-Educator</button>
-        <button data-tag="spe" onclick="calculate2(650), updateAmmo2('1')"; class="my-button">Grenade Pistol</button>
-        <button data-tag="spe" onclick="calculate2(200), updateAmmo2('7')"; class="my-button">Talon</button>
-        <button data-tag="spe" onclick="calculate2(0), updateAmmo2('1')"; class="my-button">Stim Pistol</button>
-        <button data-tag="spe" onclick="calculate2(500), updateAmmo2('3')"; class="my-button">Bolt Pistol</button>
-        <button data-tag="spe" onclick="calculate2(150), updateAmmo2('8')"; class="my-button">Loyalist</button>
-        <button data-tag="spe" onclick="calculate2(375), updateAmmo2('1')"; class="my-button">Loyalist(ch)</button>
-        <button data-tag="spe" onclick="calculate2(12.5), updateAmmo2('12')"; class="my-button">Crisper</button>
-        <button data-tag="spe" onclick="calculate2(1300), updateAmmo2('1')"; class="my-button">Missile Pistol</button>
-        <button data-tag="spe" onclick="calculate2(2060), updateAmmo2('1')"; class="my-button">Breacher</button>
-        <button data-tag="spe" onclick="calculate2(3000), updateAmmo2('1')"; class="my-button">Ultimatum</button>
+        <button data-tag="spe" onclick="calculate2(6), updateAmmo2('42')"; class="sec-button">Dagger</button>
+        <button data-tag="spe" onclick="calculate2(405), updateAmmo2('3')"; class="sec-button">Bushwhacker</button>
+        <button data-tag="spe" onclick="calculate2(60), updateAmmo2('2')"; class="sec-button">Re-Educator</button>
+        <button data-tag="spe" onclick="calculate2(650), updateAmmo2('1')"; class="sec-button">Grenade Pistol</button>
+        <button data-tag="spe" onclick="calculate2(200), updateAmmo2('7')"; class="sec-button">Talon</button>
+        <button data-tag="spe" onclick="calculate2(0), updateAmmo2('1')"; class="sec-button">Stim Pistol</button>
+        <button data-tag="spe" onclick="calculate2(500), updateAmmo2('3')"; class="sec-button">Bolt Pistol</button>
+        <button data-tag="spe" onclick="calculate2(150), updateAmmo2('8')"; class="sec-button">Loyalist</button>
+        <button data-tag="spe" onclick="calculate2(375), updateAmmo2('1')"; class="sec-button">Loyalist(ch)</button>
+        <button data-tag="spe" onclick="calculate2(12.5), updateAmmo2('12')"; class="sec-button">Crisper</button>
+        <button data-tag="spe" onclick="calculate2(1300), updateAmmo2('1')"; class="sec-button">Missile Pistol</button>
+        <button data-tag="spe" onclick="calculate2(2060), updateAmmo2('1')"; class="sec-button">Breacher</button>
+        <button data-tag="spe" onclick="calculate2(3000), updateAmmo2('1')"; class="sec-button">Ultimatum</button>
             </div>
     </div>
     </div>
@@ -345,33 +345,33 @@
         </div>
             <div>
         <label  style="color: #b2FF00;" data-tag="indent">Standard</label><br>
-        <button data-tag="thr" onclick="calculate4(800), updateAmmo4('1')"; class="my-button">High Explosive</button>
-        <button data-tag="thr" onclick="calculate4(500), updateAmmo4('1')"; class="my-button">Frag</button>
-        <button data-tag="thr" onclick="calculate4(400), updateAmmo4('1')"; class="my-button">Incendiary</button>
-        <button data-tag="thr" onclick="calculate4(300), updateAmmo4('1')"; class="my-button">Pineapple</button>
-        <button data-tag="thr" onclick="calculate4(1000), updateAmmo4('1')"; class="my-button">Dynamite</button>
+        <button data-tag="thr" onclick="calculate4(800), updateAmmo4('1')"; class="thr-button">High Explosive</button>
+        <button data-tag="thr" onclick="calculate4(500), updateAmmo4('1')"; class="thr-button">Frag</button>
+        <button data-tag="thr" onclick="calculate4(400), updateAmmo4('1')"; class="thr-button">Incendiary</button>
+        <button data-tag="thr" onclick="calculate4(300), updateAmmo4('1')"; class="thr-button">Pineapple</button>
+        <button data-tag="thr" onclick="calculate4(1000), updateAmmo4('1')"; class="thr-button">Dynamite</button>
             </div>
             <div>
                 <label  style="color: #FF0060;" data-tag="indent">Special</label><br>
-        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('1')"; class="my-button">Smoke</button>
-        <button data-tag="spThr" onclick="calculate4(25), updateAmmo4('1')"; class="my-button">Stun</button>
-        <button data-tag="spThr" onclick="calculate4(40), updateAmmo4('1')"; class="my-button">Immolation</button>
-        <button data-tag="spThr" onclick="calculate4(300), updateAmmo4('5')"; class="my-button">Throwing Knife</button>
-        <button data-tag="spThr" onclick="calculate4(30), updateAmmo4('1')"; class="my-button">Urchin</button>
-        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('1')"; class="my-button">Smokescreen</button>
-        <button data-tag="spThr" onclick="calculate4(400), updateAmmo4('1')"; class="my-button">Impact</button>
-        <button data-tag="spThr" onclick="calculate4(160), updateAmmo4('1')"; class="my-button">Pyrotech</button>
-        <button data-tag="spThr" onclick="calculate4(100), updateAmmo4('1')"; class="my-button">Gas</button>
-        <button data-tag="spThr" onclick="calculate4(1000), updateAmmo4('1')"; class="my-button">Lure Mine</button>
-        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('2')"; class="my-button">Shield</button>
-        <button data-tag="spThr" onclick="calculate4(300), updateAmmo4('1')"; class="my-button">Incendiary Impact</button>
-        <button data-tag="spThr" onclick="calculate4(500), updateAmmo4('1')"; class="my-button">Seeker</button>
-        <button data-tag="spThr" onclick="calculate4(750), updateAmmo4('1')"; class="my-button">Arc</button>
-        <button data-tag="spThr" onclick="calculate4(1250), updateAmmo4('2')"; class="my-button">Super Arc</button>
-        <button data-tag="spThr" onclick="calculate4(2000), updateAmmo4('1')"; class="my-button">Melta Mine</button>
-        <button data-tag="spThr" onclick="calculate4(2300), updateAmmo4('1')"; class="my-button">Thermite</button>
-        <button data-tag="spThr" onclick="calculate4(2000), updateAmmo4('1')"; class="my-button">Giga grenade</button>
-        <button data-tag="spThr" onclick="calculate4(1800), updateAmmo4('1')"; class="my-button">Anti-Tank Seeker</button>
+        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('1')"; class="thr-button">Smoke</button>
+        <button data-tag="spThr" onclick="calculate4(25), updateAmmo4('1')"; class="thr-button">Stun</button>
+        <button data-tag="spThr" onclick="calculate4(40), updateAmmo4('1')"; class="thr-button">Immolation</button>
+        <button data-tag="spThr" onclick="calculate4(300), updateAmmo4('5')"; class="thr-button">Throwing Knife</button>
+        <button data-tag="spThr" onclick="calculate4(30), updateAmmo4('1')"; class="thr-button">Urchin</button>
+        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('1')"; class="thr-button">Smokescreen</button>
+        <button data-tag="spThr" onclick="calculate4(400), updateAmmo4('1')"; class="thr-button">Impact</button>
+        <button data-tag="spThr" onclick="calculate4(160), updateAmmo4('1')"; class="thr-button">Pyrotech</button>
+        <button data-tag="spThr" onclick="calculate4(100), updateAmmo4('1')"; class="thr-button">Gas</button>
+        <button data-tag="spThr" onclick="calculate4(1000), updateAmmo4('1')"; class="thr-button">Lure Mine</button>
+        <button data-tag="spThr" onclick="calculate4(0), updateAmmo4('2')"; class="thr-button">Shield</button>
+        <button data-tag="spThr" onclick="calculate4(300), updateAmmo4('1')"; class="thr-button">Incendiary Impact</button>
+        <button data-tag="spThr" onclick="calculate4(500), updateAmmo4('1')"; class="thr-button">Seeker</button>
+        <button data-tag="spThr" onclick="calculate4(750), updateAmmo4('1')"; class="thr-button">Arc</button>
+        <button data-tag="spThr" onclick="calculate4(1250), updateAmmo4('2')"; class="thr-button">Super Arc</button>
+        <button data-tag="spThr" onclick="calculate4(2000), updateAmmo4('1')"; class="thr-button">Melta Mine</button>
+        <button data-tag="spThr" onclick="calculate4(2300), updateAmmo4('1')"; class="thr-button">Thermite</button>
+        <button data-tag="spThr" onclick="calculate4(2000), updateAmmo4('1')"; class="thr-button">Giga grenade</button>
+        <button data-tag="spThr" onclick="calculate4(1800), updateAmmo4('1')"; class="thr-button">Anti-Tank Seeker</button>
             </div>
     </div>
     </div>
@@ -409,53 +409,53 @@
         </div>
             <div>
         <label  style="color: #FF00AA;" data-tag="indent">Guns</label><br>
-        <button data-tag="spc" onclick="calculate3(95), updateAmmo3('15')"; class="my-button">MG-43 Machine gun</button>
-        <button data-tag="spc" onclick="calculate3(450), updateAmmo3('6')"; class="my-button">APW-1 Anti-material rifle</button>
-        <button data-tag="spc" onclick="calculate3(90), updateAmmo3('19')"; class="my-button">M-105 Stalwart</button>
-        <button data-tag="spc" onclick="calculate3(150), updateAmmo3('12')"; class="my-button">MG-206 Heavy machine gun</button>
-        <button data-tag="spc" onclick="calculate3(100), updateAmmo3('21')"; class="my-button">MGX-42 Bullet storm</button>
-        <button data-tag="spc" onclick="calculate3(80), updateAmmo3('25')"; class="my-button">M-1000 Maxigun</button>
+        <button data-tag="spc" onclick="calculate3(95), updateAmmo3('15')"; class="sup-button">MG-43 Machine gun</button>
+        <button data-tag="spc" onclick="calculate3(450), updateAmmo3('6')"; class="sup-button">APW-1 Anti-material rifle</button>
+        <button data-tag="spc" onclick="calculate3(90), updateAmmo3('19')"; class="sup-button">M-105 Stalwart</button>
+        <button data-tag="spc" onclick="calculate3(150), updateAmmo3('12')"; class="sup-button">MG-206 Heavy machine gun</button>
+        <button data-tag="spc" onclick="calculate3(100), updateAmmo3('21')"; class="sup-button">MGX-42 Bullet storm</button>
+        <button data-tag="spc" onclick="calculate3(80), updateAmmo3('25')"; class="sup-button">M-1000 Maxigun</button>
             </div>
             <div>
         <label  style="color: #FFFF00;" data-tag="indent">Energy-Based</label><br>
-        <button data-tag="las" onclick="calculate3(120), updateAmmo3('5')"; class="my-button">LAS-98 Laser cannon</button>
-        <button data-tag="las" onclick="calculate3(250), updateAmmo3('2')"; class="my-button">Arc thrower</button>
-        <button data-tag="las" onclick="calculate3(2000), updateAmmo3('1')"; class="my-button">LAS-99 Quasar cannon</button>
-        <button data-tag="las" onclick="calculate3(600), updateAmmo3('3')"; class="my-button">De-escalator</button>
-        <button data-tag="las" onclick="calculate3(900), updateAmmo3('3')"; class="my-button">Epoch</button>
-        <button data-tag="las" onclick="calculate3(1600), updateAmmo3('1')"; class="my-button">Epoch(ch)</button>
-        <button data-tag="las" onclick="calculate3(600), updateAmmo3('1')"; class="my-button">RS-422 Railgun</button>
-        <button data-tag="las" onclick="calculate3(1000), updateAmmo3('1')"; class="my-button">RS-422 Railgun(o)</button>
-        <button data-tag="las" onclick="calculate3(2600), updateAmmo3('1')"; class="my-button">Meltagun</button>
+        <button data-tag="las" onclick="calculate3(120), updateAmmo3('5')"; class="sup-button">LAS-98 Laser cannon</button>
+        <button data-tag="las" onclick="calculate3(250), updateAmmo3('2')"; class="sup-button">Arc thrower</button>
+        <button data-tag="las" onclick="calculate3(2000), updateAmmo3('1')"; class="sup-button">LAS-99 Quasar cannon</button>
+        <button data-tag="las" onclick="calculate3(600), updateAmmo3('3')"; class="sup-button">De-escalator</button>
+        <button data-tag="las" onclick="calculate3(900), updateAmmo3('3')"; class="sup-button">Epoch</button>
+        <button data-tag="las" onclick="calculate3(1600), updateAmmo3('1')"; class="sup-button">Epoch(ch)</button>
+        <button data-tag="las" onclick="calculate3(600), updateAmmo3('1')"; class="sup-button">RS-422 Railgun</button>
+        <button data-tag="las" onclick="calculate3(1000), updateAmmo3('1')"; class="sup-button">RS-422 Railgun(o)</button>
+        <button data-tag="las" onclick="calculate3(2600), updateAmmo3('1')"; class="sup-button">Meltagun</button>
             </div>
             <div>
         <label  style="color: #FF9900;" data-tag="indent">Explosive</label><br>
-        <button data-tag="ar" onclick="calculate3(2000), updateAmmo3('1')"; class="my-button">EAT-017 Expendable anti tank</button>
-        <button data-tag="ar" onclick="calculate3(400), updateAmmo3('2')"; class="my-button">GL-21 Grenade launcher</button>
-        <button data-tag="ar" onclick="calculate3(3200), updateAmmo3('1')"; class="my-button">GR-8 Recoilless rifle</button>
-        <button data-tag="ar" onclick="calculate3(325), updateAmmo3('3')"; class="my-button">AC-8 Autocannon</button>
-        <button data-tag="ar" onclick="calculate3(1000), updateAmmo3('1')"; class="my-button">RL-77 Airburst rocket launcher</button>
-        <button data-tag="ar" onclick="calculate3(1100), updateAmmo3('4')"; class="my-button">MLS-4X Commando</button>
-        <button data-tag="ar" onclick="calculate3(150), updateAmmo3('6')"; class="my-button">Belt-fed grenade launcher</button>
-        <button data-tag="ar" onclick="calculate3(1000), updateAmmo3('1')"; class="my-button">EAT-700 Expendable Napalm</button>
-        <button data-tag="ar" onclick="calculate3(4000), updateAmmo3('1')"; class="my-button">FAF-14 spear</button>
-        <button data-tag="ar" onclick="calculate3(800), updateAmmo3('7')"; class="my-button">STA-X3 W.A.S.P. launcher</button>
-        <button data-tag="ar" onclick="calculate3(650), updateAmmo3('1')"; class="my-button">Speargun</button>
-        <button data-tag="ar" onclick="calculate3(4000), updateAmmo3('1')"; class="my-button">Solo silo</button>
-        <button data-tag="ar" onclick="calculate3(2000), updateAmmo3('1')"; class="my-button">C4 pack</button>
-        <button data-tag="ar" onclick="calculate3(3500), updateAmmo3('1')"; class="my-button">EAT-411 leveller</button>
+        <button data-tag="ar" onclick="calculate3(2000), updateAmmo3('1')"; class="sup-button">EAT-017 Expendable anti tank</button>
+        <button data-tag="ar" onclick="calculate3(400), updateAmmo3('2')"; class="sup-button">GL-21 Grenade launcher</button>
+        <button data-tag="ar" onclick="calculate3(3200), updateAmmo3('1')"; class="sup-button">GR-8 Recoilless rifle</button>
+        <button data-tag="ar" onclick="calculate3(325), updateAmmo3('3')"; class="sup-button">AC-8 Autocannon</button>
+        <button data-tag="ar" onclick="calculate3(1000), updateAmmo3('1')"; class="sup-button">RL-77 Airburst rocket launcher</button>
+        <button data-tag="ar" onclick="calculate3(1100), updateAmmo3('4')"; class="sup-button">MLS-4X Commando</button>
+        <button data-tag="ar" onclick="calculate3(150), updateAmmo3('6')"; class="sup-button">Belt-fed grenade launcher</button>
+        <button data-tag="ar" onclick="calculate3(1000), updateAmmo3('1')"; class="sup-button">EAT-700 Expendable Napalm</button>
+        <button data-tag="ar" onclick="calculate3(4000), updateAmmo3('1')"; class="sup-button">FAF-14 spear</button>
+        <button data-tag="ar" onclick="calculate3(800), updateAmmo3('7')"; class="sup-button">STA-X3 W.A.S.P. launcher</button>
+        <button data-tag="ar" onclick="calculate3(650), updateAmmo3('1')"; class="sup-button">Speargun</button>
+        <button data-tag="ar" onclick="calculate3(4000), updateAmmo3('1')"; class="sup-button">Solo silo</button>
+        <button data-tag="ar" onclick="calculate3(2000), updateAmmo3('1')"; class="sup-button">C4 pack</button>
+        <button data-tag="ar" onclick="calculate3(3500), updateAmmo3('1')"; class="sup-button">EAT-411 leveller</button>
             </div>
             <div>
         <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
-        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="my-button">FLAM-40 Flamethrower</button>
-        <button data-tag="spe" onclick="calculate3(8), updateAmmo3('10')"; class="my-button">TX-41 Sterilizer</button>
-        <button data-tag="spe" onclick="calculate3(200), updateAmmo3('2')"; class="my-button">CQC-1 One true flag</button>
-        <button data-tag="spe" onclick="calculate3(300), updateAmmo3('3')"; class="my-button">Breaching hammer(h)</button>
-        <button data-tag="spe" onclick="calculate3(2500), updateAmmo3('1')"; class="my-button">Breaching hammer(e)</button>
-        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="my-button">Cremator</button>
-        <button data-tag="spe" onclick="calculate3(450), updateAmmo3('1')"; class="my-button">Defoliation tool(1)</button>
-        <button data-tag="spe" onclick="calculate3(600), updateAmmo3('1')"; class="my-button">Defoliation tool(2)</button>
-        <button data-tag="spe" onclick="calculate3(750), updateAmmo3('1')"; class="my-button">Defoliation tool(3)</button>
+        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="sup-button">FLAM-40 Flamethrower</button>
+        <button data-tag="spe" onclick="calculate3(8), updateAmmo3('10')"; class="sup-button">TX-41 Sterilizer</button>
+        <button data-tag="spe" onclick="calculate3(200), updateAmmo3('2')"; class="sup-button">CQC-1 One true flag</button>
+        <button data-tag="spe" onclick="calculate3(300), updateAmmo3('3')"; class="sup-button">Breaching hammer(h)</button>
+        <button data-tag="spe" onclick="calculate3(2500), updateAmmo3('1')"; class="sup-button">Breaching hammer(e)</button>
+        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="sup-button">Cremator</button>
+        <button data-tag="spe" onclick="calculate3(450), updateAmmo3('1')"; class="sup-button">Defoliation tool(1)</button>
+        <button data-tag="spe" onclick="calculate3(600), updateAmmo3('1')"; class="sup-button">Defoliation tool(2)</button>
+        <button data-tag="spe" onclick="calculate3(750), updateAmmo3('1')"; class="sup-button">Defoliation tool(3)</button>
             </div>
     </div>
     </div>
@@ -661,6 +661,39 @@
       button.addEventListener('click', function() {
         // 1. Remove the active class from whichever button currently has it
         document.querySelector('.my-button.active-clicked')?.classList.remove('active-clicked');
+        
+        // 2. Add the active class to the newly clicked button
+        this.classList.add('active-clicked');
+      });
+    });
+        const buttons = document.querySelectorAll('.sec-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // 1. Remove the active class from whichever button currently has it
+        document.querySelector('.sec-button.active-clicked')?.classList.remove('active-clicked');
+        
+        // 2. Add the active class to the newly clicked button
+        this.classList.add('active-clicked');
+      });
+    });
+        const buttons = document.querySelectorAll('.thr-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // 1. Remove the active class from whichever button currently has it
+        document.querySelector('.thr-button.active-clicked')?.classList.remove('active-clicked');
+        
+        // 2. Add the active class to the newly clicked button
+        this.classList.add('active-clicked');
+      });
+    });
+        const buttons = document.querySelectorAll('.spt-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // 1. Remove the active class from whichever button currently has it
+        document.querySelector('.spt-button.active-clicked')?.classList.remove('active-clicked');
         
         // 2. Add the active class to the newly clicked button
         this.classList.add('active-clicked');
