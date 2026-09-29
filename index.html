@@ -549,7 +549,7 @@
             const inputValue = document.getElementById('numInput').value;
             const inputAP = ap;
             const inputAmmoShot = document.getElementById('ammoInput').value;
-            const inputPS = (ps/100) + 1;
+            const inputPS = (document.getElementById("ps").value / 100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue === "" || inputValue > "15" || inputValue < "1") {
@@ -584,7 +584,7 @@
             const inputValue2 = document.getElementById('numInput2').value;
             const inputAP2 = ap2;
             const inputAmmoShot2 = document.getElementById('ammoInput2').value;
-            const inputPS2 = (ps2/100) + 1;
+            const inputPS2 = (document.getElementById("ps2").value / 100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue2 === "" || inputValue2 > "15" || inputValue2 < "1") {
@@ -619,8 +619,7 @@
             const inputValue3 = document.getElementById('numInput3').value;
             const inputAP3 = ap3;
             const inputAmmoShot3 = document.getElementById('ammoInput3').value;
-            const inputPS3 = (ps3/100) + 1;
-            
+            const inputPS3 = (document.getElementById("ps3").value / 100) + 1;            
             // Validate that the input is a valid number
             if (inputValue3 === "" || inputValue3 > "15" || inputValue3 < "1") {
                 alert("Please enter a valid number first.");
@@ -654,7 +653,7 @@
             const inputValue4 = document.getElementById('numInput4').value;
             const inputAP4 = ap4;
             const inputAmmoShot4 = document.getElementById('ammoInput4').value;
-            const inputPS4 = (ps4/100) + 1;
+            const inputPS4 = (document.getElementById("ps4").value / 100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue4 === "" || inputValue4 > "15" || inputValue4 < "1") {
