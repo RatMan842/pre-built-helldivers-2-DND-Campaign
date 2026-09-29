@@ -38,11 +38,26 @@
           gap: 10px;             /* Adds clean spacing between the objects */
         }
         /* Base button styles */
-    .my-button, .sec-button, .thr-button, .spt-button{
+    .my-button {
+    }
+    .sec-button {
+    }
+    .thr-button{
+    }
+    .spt-button{
     }
 
     /* Style applied only to the last clicked button */
-    .my-button.active-clicked, .sec-button.active-clicked, .thr-button.active-clicked, .spt-button.active-clicked {
+    .my-button.active-clicked {
+      outline: 3px solid black;
+    }
+        .sec-button.active-clicked {
+      outline: 3px solid black;
+    }
+        .thr-button.active-clicked {
+      outline: 3px solid black;
+    }
+        .spt-button.active-clicked {
       outline: 3px solid black;
     }
         button[data-tag="aligns"] {
