@@ -407,13 +407,13 @@
     <div class="button-group">
          <div class="aligner3">
     <div class="ammo-group">
-        <label for="ammoInput3">Ammo/<span id="output3"></span>:</label>
+        <label for="ammoInput3">Ammo / <span id="output3"></span>:</label>
         <input type="number" id="ammoInput3" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput3">Roll/15:</label>
+        <label for="numInput3">roll / 15</label>
         <input type="number" id="numInput3" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
@@ -466,10 +466,10 @@
         <button data-tag="ar" onclick="calculate3(150); updateAmmo3('6')" class="spt-button">Belt-fed grenade launcher</button>
         <button data-tag="ar" onclick="calculate3(1000); updateAmmo3('1')" class="spt-button">EAT-700 Expendable Napalm</button>
         <button data-tag="ar" onclick="calculate3(4000); updateAmmo3('1')" class="spt-button">FAF-14 spear</button>
-        <button data-tag="ar" onclick="calculate3(800), updateAmmo3('7')" class="spt-button">STA-X3 W.A.S.P. launcher</button>
+        <button data-tag="ar" onclick="calculate3(800); updateAmmo3('7')" class="spt-button">STA-X3 W.A.S.P. launcher</button>
         <button data-tag="ar" onclick="calculate3(650); updateAmmo3('1')" class="spt-button">Speargun</button>
         <button data-tag="ar" onclick="calculate3(4000); updateAmmo3('1')" class="spt-button">Solo silo</button>
-        <button data-tag="ar" onclick="calculate3(2000); updateAmmo3('1')" class="sup-button">C4 pack</button>
+        <button data-tag="ar" onclick="calculate3(2000); updateAmmo3('1')" class="spt-button">C4 pack</button>
         <button data-tag="ar" onclick="calculate3(3500); updateAmmo3('1')" class="spt-button">EAT-411 leveller</button>
             </div>
             <div>
@@ -489,40 +489,39 @@
     </div>
         </div>
     <script>
+        let ps1 = "0";
+        let ps2 = "0";
+        let ps3 = "0";
+        let ps4 = "0";
         let ap = "1";
         function updateAP(newValue) {
           ap = newValue;// Assigns the new value to the let variable
           console.log(ap); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("APoutput").innerText = ap;
         }
         let ap2 = "1";
         function updateAP2(newValue) {
           ap2 = newValue;// Assigns the new value to the let variable
           console.log(ap2); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("APoutput2").innerText = ap2;
         }
         let ap3 = "1";
         function updateAP3(newValue) {
           ap3 = newValue;// Assigns the new value to the let variable
           console.log(ap3); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("APoutput3").innerText = ap3;
         }
         let ap4 = "1";
         function updateAP4(newValue) {
           ap4 = newValue;// Assigns the new value to the let variable
           console.log(ap4); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("APoutput4").innerText = ap4;
         }
         let ammo = "11";
         function updateAmmo(newValue) {
           ammo = newValue;// Assigns the new value to the let variable
           console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
-          document.getElementById("output").innerText = ammo;
         }
         let ammo2 = "5";
         function updateAmmo2(newValue) {
@@ -598,12 +597,12 @@
             }
             else if (inputAmmoShot2 > ammo2) {
                 alert("Please enter a valid number first.");
-                imputAmmoShot2 = ammo2;
+                inputAmmoShot2 = ammo2;
                 return;
             }
             else if (inputAmmoShot2 < "1") {
                 alert("Please enter a valid number first.");
-                imputAmmoShot2 = "1";
+                inputAmmoShot2 = "1";
                 return;
             }
 
@@ -620,7 +619,7 @@
             const inputValue3 = document.getElementById('numInput3').value;
             const inputAP3 = ap3;
             const inputAmmoShot3 = document.getElementById('ammoInput3').value;
-            const inputPS3 = (ps/100) + 1;
+            const inputPS3 = (ps3/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue3 === "" || inputValue3 > "15" || inputValue3 < "1") {
@@ -655,7 +654,7 @@
             const inputValue4 = document.getElementById('numInput4').value;
             const inputAP4 = ap4;
             const inputAmmoShot4 = document.getElementById('ammoInput4').value;
-            const inputPS4 = (ps/100) + 1;
+            const inputPS4 = (ps4/100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue4 === "" || inputValue4 > "15" || inputValue4 < "1") {
