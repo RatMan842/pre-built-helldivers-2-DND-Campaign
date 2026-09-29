@@ -462,15 +462,15 @@
             </div>
             <div>
         <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
-        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="spt-button">FLAM-40 Flamethrower</button>
-        <button data-tag="spe" onclick="calculate3(8), updateAmmo3('10')"; class="spt-button">TX-41 Sterilizer</button>
-        <button data-tag="spe" onclick="calculate3(200), updateAmmo3('2')"; class="spt-button">CQC-1 One true flag</button>
-        <button data-tag="spe" onclick="calculate3(300), updateAmmo3('3')"; class="spt-button">Breaching hammer(h)</button>
-        <button data-tag="spe" onclick="calculate3(2500), updateAmmo3('1')"; class="spt-button">Breaching hammer(e)</button>
-        <button data-tag="spe" onclick="calculate3(12.5), updateAmmo3('12')"; class="spt-button">Cremator</button>
-        <button data-tag="spe" onclick="calculate3(450), updateAmmo3('1')"; class="spt-button">Defoliation tool(1)</button>
-        <button data-tag="spe" onclick="calculate3(600), updateAmmo3('1')"; class="spt-button">Defoliation tool(2)</button>
-        <button data-tag="spe" onclick="calculate3(750), updateAmmo3('1')"; class="spt-button">Defoliation tool(3)</button>
+        <button data-tag="spe" onclick="calculate3(12.5); updateAmmo3('12'); setActive(this)" class="spt-button">FLAM-40 Flamethrower</button>
+        <button data-tag="spe" onclick="calculate3(8); updateAmmo3('10'); setActive(this)" class="spt-button">TX-41 Sterilizer</button>
+        <button data-tag="spe" onclick="calculate3(200); updateAmmo3('2'); setActive(this)" class="spt-button">CQC-1 One true flag</button>
+        <button data-tag="spe" onclick="calculate3(300); updateAmmo3('3'); setActive(this)" class="spt-button">Breaching hammer(h)</button>
+        <button data-tag="spe" onclick="calculate3(2500); updateAmmo3('1'); setActive(this)" class="spt-button">Breaching hammer(e)</button>
+        <button data-tag="spe" onclick="calculate3(12.5); updateAmmo3('12'); setActive(this)" class="spt-button">Cremator</button>
+        <button data-tag="spe" onclick="calculate3(450); updateAmmo3('1'); setActive(this)" class="spt-button">Defoliation tool(1)</button>
+        <button data-tag="spe" onclick="calculate3(600); updateAmmo3('1'); setActive(this)" class="spt-button">Defoliation tool(2)</button>
+        <button data-tag="spe" onclick="calculate3(750); updateAmmo3('1'); setActive(this)" class="spt-button">Defoliation tool(3)</button>
             </div>
     </div>
     </div>
@@ -714,6 +714,16 @@
         this.classList.add('active-clicked');
       });
     });
+        function setActive(button) {
+        const group = button.ClassList.contains("my-button") ? ".my-button":
+            const group = button.ClassList.contains("sec-button") ? ".sec-button":
+            const group = button.ClassList.contains("thr-button") ? ".thr-button":
+            ".spt-button";
+            document.querySelectorAll(group).forEach(btn => {
+                btn.classList.remove("active-clicked");
+            });
+            button.classList.add("active-clicked");
+        }
     </script>
 
 </body>
