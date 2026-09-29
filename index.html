@@ -151,13 +151,13 @@
     <div class="button-group">
          <div class="aligner">
     <div class="ammo-group">
-        <label for="ammoInput">ammo/<span id="output"></span>:</label>
+        <label for="ammoInput">ammo /<span id="output"></span>:</label>
         <input type="number" id="ammoInput" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput">roll/15:</label>
+        <label for="numInput">roll /15:</label>
         <input type="number" id="numInput" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
@@ -268,13 +268,13 @@
     <div class="button-group">
          <div class="aligner2">
     <div class="ammo-group">
-        <label for="ammoInput2">Ammo/<span id="output2"></span>:</label>
+        <label for="ammoInput2">Ammo /<span id="output2"></span>:</label>
         <input type="number" id="ammoInput2" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput2">roll/15:</label>
+        <label for="numInput2">roll /15:</label>
         <input type="number" id="numInput2" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
@@ -340,13 +340,13 @@
     <div class="button-group">
          <div class="aligner4">
     <div class="ammo-group">
-        <label for="ammoInput4">ammo/<span id="output4"></span>:</label>
+        <label for="ammoInput4">ammo /<span id="output4"></span>:</label>
         <input type="number" id="ammoInput4" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput4">Roll/15:</label>
+        <label for="numInput4">Roll /15:</label>
         <input type="number" id="numInput4" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
@@ -407,13 +407,13 @@
     <div class="button-group">
          <div class="aligner3">
     <div class="ammo-group">
-        <label for="ammoInput3">Ammo / <span id="output3"></span>:</label>
+        <label for="ammoInput3">Ammo /<span id="output3"></span>:</label>
         <input type="number" id="ammoInput3" value="1" placeholder="Type a number...">
     </div>
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput3">roll / 15</label>
+        <label for="numInput3">roll /15</label>
         <input type="number" id="numInput3" value="15" placeholder="Type a number...">
     </div>
     <div class="passive-group">
@@ -522,6 +522,7 @@
           ammo = newValue;// Assigns the new value to the let variable
           console.log(ammo); // Checks the value in the console
           // Updates the HTML to show the current variable value
+          document.getElementById("output2").innerText = ammo;
         }
         let ammo2 = "5";
         function updateAmmo2(newValue) {
