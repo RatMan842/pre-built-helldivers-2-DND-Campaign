@@ -553,7 +553,7 @@
             const inputPS = (document.getElementById("psInput").value / 100) + 1;
             
             // Validate that the input is a valid number
-            if (inputValue === "" || inputValue > "20" || inputValue < "6") {
+            if (inputValue === "" || inputValue > number("20") || inputValue < number("6")) {
                 alert("Please enter a valid number first.");
                 return;
             }
