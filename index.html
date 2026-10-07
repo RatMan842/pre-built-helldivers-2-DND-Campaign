@@ -497,12 +497,66 @@
     </div>
     </div>
     </div>
+            <div style="flex-direction: column; align-items: flex-start;">
+            <h2>Stratagems</h2>
+
+    <!-- Step 2: Multiplier Buttons -->
+    <div class="button-group">
+         <div class="aligner5">
+    <div class="ammo-group">
+        <label for="ammoInput5">Ammo /<span id="output5"></span>:</label>
+        <input type="number" id="ammoInput5" value="1" placeholder="Type a number...">
+    </div>
+    
+        <!-- Step 1: User Input -->
+    <div class="input-group">
+        <label for="numInput5">roll /20</label>
+        <input type="number" id="numInput5" value="20" placeholder="Type a number...">
+    </div>
+    <div class="passive-group">
+        <label for="psInput5"> +%:</label>
+        <input type="number" id="psInput5" value="0" placeholder="Type a number...">
+    </div>
+     <div id="ap-group">
+         <label>Weapon AP is:</label>
+         <div class="aligner5">
+         <button onclick="updateAP5('0')">less</button>
+         <button onclick="updateAP5('0.6')">the same</button>
+         <button onclick="updateAP5('1')">higher</button>
+         </div>
+    </div>
+    <!-- Step 3: Display Result -->
+    </div>
+    <div style="max-width: 800px; width: 100%; margin: 0 auto;">
+        <div id="result-box">
+            Result: <strong id="resultValue5">0</strong>
+        </div>
+            <div>
+        <label  style="color: #FF00AA;" data-tag="indent">Guns</label><br>
+        <button data-tag="spt" onclick="calculate5(95); updateAmmo5('15')" class="str-button">MG-43 Machine gun</button>
+            </div>
+            <div>
+        <label  style="color: #FFFF00;" data-tag="indent">Energy-Based</label><br>
+        <button data-tag="las" onclick="calculate5(120); updateAmmo5('5')" class="str-button">LAS-98 Laser cannon</button>
+            </div>
+            <div>
+        <label  style="color: #FF9900;" data-tag="indent">Explosive</label><br>
+        <button data-tag="ar" onclick="calculate5(2000); updateAmmo5('1')" class="str-button">EAT-017 Expendable anti tank</button>
+            </div>
+            <div>
+        <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
+        <button data-tag="spe" onclick="calculate5(12.5); updateAmmo5('12')" class="str-button">FLAM-40 Flamethrower</button>
+            </div>
+    </div>
+    </div>
+    </div>
         </div>
     <script>
         let ps1 = "0";
         let ps2 = "0";
         let ps3 = "0";
         let ps4 = "0";
+        let ps5 = "0";
         let ap = "1";
         function updateAP(newValue) {
           ap = newValue;// Assigns the new value to the let variable
@@ -525,6 +579,12 @@
         function updateAP4(newValue) {
           ap4 = newValue;// Assigns the new value to the let variable
           console.log(ap4); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+        }
+        let ap5 = "1";
+        function updateAP5(newValue) {
+          ap5 = newValue;// Assigns the new value to the let variable
+          console.log(ap5); // Checks the value in the console
           // Updates the HTML to show the current variable value
         }
         let ammo = "11";
@@ -554,6 +614,13 @@
           console.log(ammo4); // Checks the value in the console
           // Updates the HTML to show the current variable value
           document.getElementById("output4").innerText = ammo4;
+        }
+        let ammo5 = "1";
+        function updateAmmo5(newValue) {
+          ammo5 = newValue;// Assigns the new value to the let variable
+          console.log(ammo5); // Checks the value in the console
+          // Updates the HTML to show the current variable value
+          document.getElementById("output5").innerText = ammo5;
         }
         function calculate(multiplier) {
             // Get the input value
@@ -694,12 +761,12 @@
             // Display the result on the webpage
             document.getElementById('resultValue4').innerText = finalResult;
         }
-        function calculate4(multiplier) {
+        function calculate5(multiplier) {
             // Get the input value
-            const inputValue4 = document.getElementById('numInput4').value;
-            const inputAP4 = ap4;
-            const inputAmmoShot4 = document.getElementById('ammoInput4').value;
-            const inputPS4 = (document.getElementById("psInput4").value / 100) + 1;
+            const inputValue5 = document.getElementById('numInput5').value;
+            const inputAP5 = ap5;
+            const inputAmmoShot5 = document.getElementById('ammoInput5').value;
+            const inputPS5 = (document.getElementById("psInput5").value / 100) + 1;
             
             // Validate that the input is a valid number
             if (inputValue5 === "" || inputValue5 > Number('20') || inputValue5 < Number('6')) {
@@ -754,6 +821,13 @@
     document.querySelectorAll('.spt-button').forEach(button => {
       button.addEventListener('click', function() {
         document.querySelectorAll('.spt-button.active-clicked')
+        .forEach(btn => btn.classList.remove('active-clicked'));
+        this.classList.add('active-clicked');
+      });
+    });
+    document.querySelectorAll('.str-button').forEach(button => {
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.str-button.active-clicked')
         .forEach(btn => btn.classList.remove('active-clicked'));
         this.classList.add('active-clicked');
       });
