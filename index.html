@@ -37,6 +37,11 @@
           align-items: flex-start;   /* Vertically centers all objects on this line */
           gap: 10px;             /* Adds clean spacing between the objects */
         }
+        .aligner5 {
+          display: flex;         /* Turns the container into a flex line */
+          align-items: flex-start;   /* Vertically centers all objects on this line */
+          gap: 10px;             /* Adds clean spacing between the objects */
+        }
         /* Base button styles */
     .my-button {
     }
@@ -45,6 +50,8 @@
     .thr-button{
     }
     .spt-button{
+    }
+    .str-button{
     }
 
     /* Style applied only to the last clicked button */
@@ -58,6 +65,9 @@
       outline: 3px solid black;
     }
         .spt-button.active-clicked {
+      outline: 3px solid black;
+    }
+        .str-button.active-clicked {
       outline: 3px solid black;
     }
         button[data-tag="aligns"] {
@@ -657,7 +667,7 @@
             const inputPS4 = (document.getElementById("psInput4").value / 100) + 1;
             
             // Validate that the input is a valid number
-            if (inputValue4 === "" || inputValue4 > Number('6') || inputValue4 < Number('6')) {
+            if (inputValue4 === "" || inputValue4 > Number('20') || inputValue4 < Number('6')) {
                 alert("Please enter a valid number first.");
                 return;
             }
@@ -683,6 +693,41 @@
 
             // Display the result on the webpage
             document.getElementById('resultValue4').innerText = finalResult;
+        }
+        function calculate4(multiplier) {
+            // Get the input value
+            const inputValue4 = document.getElementById('numInput4').value;
+            const inputAP4 = ap4;
+            const inputAmmoShot4 = document.getElementById('ammoInput4').value;
+            const inputPS4 = (document.getElementById("psInput4").value / 100) + 1;
+            
+            // Validate that the input is a valid number
+            if (inputValue5 === "" || inputValue5 > Number('20') || inputValue5 < Number('6')) {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            if (inputAmmoShot5 === "") {
+                alert("Please enter a valid number first.");
+                return;
+            }
+            else if (inputAmmoShot5 > ammo5) {
+                alert("Please enter a valid number first.");
+                imputAmmoShot5 = ammo5;
+                return;
+            }
+            else if (inputAmmoShot5 < "1") {
+                alert("Please enter a valid number first.");
+                imputAmmoShot5 = "1";
+                return;
+            }
+
+            // Perform the logic: (Input / 20) * Multiplier
+            const stepOne = Number(inputAmmoShot5) * Number(ap5);
+            const stepTwo = Number(inputValue5) / 20;
+            const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS5);
+
+            // Display the result on the webpage
+            document.getElementById('resultValue5').innerText = finalResult;
         }
     // Select all buttons
     document.querySelectorAll('.my-button').forEach(button => {
