@@ -157,8 +157,8 @@
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput">roll /15:</label>
-        <input type="number" id="numInput" value="15" placeholder="Type a number...">
+        <label for="numInput">roll /20:</label>
+        <input type="number" id="numInput" value="20" placeholder="Type a number...">
     </div>
     <div class="passive-group">
         <label for="psInput"> +%:</label>
@@ -274,8 +274,8 @@
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput2">roll /15:</label>
-        <input type="number" id="numInput2" value="15" placeholder="Type a number...">
+        <label for="numInput2">roll /20:</label>
+        <input type="number" id="numInput2" value="20" placeholder="Type a number...">
     </div>
     <div class="passive-group">
         <label for="psInput2"> +%:</label>
@@ -346,8 +346,8 @@
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput4">Roll /15:</label>
-        <input type="number" id="numInput4" value="15" placeholder="Type a number...">
+        <label for="numInput4">Roll /20:</label>
+        <input type="number" id="numInput4" value="20" placeholder="Type a number...">
     </div>
     <div class="passive-group">
         <label for="psInput4"> +%:</label>
@@ -413,8 +413,8 @@
     
         <!-- Step 1: User Input -->
     <div class="input-group">
-        <label for="numInput3">roll /15</label>
-        <input type="number" id="numInput3" value="15" placeholder="Type a number...">
+        <label for="numInput3">roll /20</label>
+        <input type="number" id="numInput3" value="20" placeholder="Type a number...">
     </div>
     <div class="passive-group">
         <label for="psInput3"> +%:</label>
@@ -553,7 +553,7 @@
             const inputPS = (document.getElementById("psInput").value / 100) + 1;
             
             // Validate that the input is a valid number
-            if (inputValue === "" || inputValue > "15" || inputValue < "1") {
+            if (inputValue === "" || inputValue > "20" || inputValue < "6") {
                 alert("Please enter a valid number first.");
                 return;
             }
@@ -574,7 +574,7 @@
 
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot) * Number(ap);
-            const stepTwo = Number(inputValue) / 15;
+            const stepTwo = Number(inputValue) / 20;
             const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS);
 
             // Display the result on the webpage
@@ -588,7 +588,7 @@
             const inputPS2 = (document.getElementById("psInput2").value / 100) + 1;
             
             // Validate that the input is a valid number
-            if (inputValue2 === "" || inputValue2 > "15" || inputValue2 < "1") {
+            if (inputValue2 === "" || inputValue2 > "20" || inputValue2 < "6") {
                 alert("Please enter a valid number first.");
                 return;
             }
@@ -609,7 +609,7 @@
 
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot2) * Number(ap2);
-            const stepTwo = Number(inputValue2) / 15;
+            const stepTwo = Number(inputValue2) / 20;
             const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS2);
 
             // Display the result on the webpage
@@ -622,7 +622,7 @@
             const inputAmmoShot3 = document.getElementById('ammoInput3').value;
             const inputPS3 = (document.getElementById("psInput3").value / 100) + 1;            
             // Validate that the input is a valid number
-            if (inputValue3 === "" || inputValue3 > "15" || inputValue3 < "1") {
+            if (inputValue3 === "" || inputValue3 > "20" || inputValue3 < "6") {
                 alert("Please enter a valid number first.");
                 return;
             }
@@ -643,7 +643,7 @@
 
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot3) * Number(ap3);
-            const stepTwo = Number(inputValue3) / 15;
+            const stepTwo = Number(inputValue3) / 20;
             const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS3);
 
             // Display the result on the webpage
@@ -657,7 +657,7 @@
             const inputPS4 = (document.getElementById("psInput4").value / 100) + 1;
             
             // Validate that the input is a valid number
-            if (inputValue4 === "" || inputValue4 > "15" || inputValue4 < "1") {
+            if (inputValue4 === "" || inputValue4 > "20" || inputValue4 < "6") {
                 alert("Please enter a valid number first.");
                 return;
             }
@@ -678,7 +678,7 @@
 
             // Perform the logic: (Input / 20) * Multiplier
             const stepOne = Number(inputAmmoShot4) * Number(ap4);
-            const stepTwo = Number(inputValue4) / 15;
+            const stepTwo = Number(inputValue4) / 20;
             const finalResult = (stepOne * stepTwo * multiplier) * Number(inputPS4);
 
             // Display the result on the webpage
