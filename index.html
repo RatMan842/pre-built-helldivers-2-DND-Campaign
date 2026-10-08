@@ -508,7 +508,7 @@
     <div class="button-group">
          <div class="aligner5">
     <div class="ammo-group">
-        <label for="ammoInput5">Ammo /<span id="output5"></span>:</label>
+        <label for="ammoInput5">salvos /<span id="output5"></span>:</label>
         <input type="number" id="ammoInput5" value="1" placeholder="Type a number...">
     </div>
     
@@ -536,20 +536,64 @@
             Result: <strong id="resultValue5">0</strong>
         </div>
             <div>
-        <label  style="color: #FF00AA;" data-tag="indent">Guns</label><br>
-        <button data-tag="spt" onclick="calculate5(95); updateAmmo5('15')" class="str-button">MG-43 Machine gun</button>
+        <label  style="color: #FF00AA;" data-tag="indent">Orbital Strikes</label><br>
+        <button data-tag="spt" onclick="calculate5(4500); updateAmmo5('1')" class="str-button">Orbital precision strike</button>
+        <button data-tag="spt" onclick="calculate5(700); updateAmmo5('60')" class="str-button">Orbital gatling barrage</button>
+        <button data-tag="spt" onclick="calculate5(300); updateAmmo5('1')" class="str-button">Orbital gas strike</button>
+        <button data-tag="spt" onclick="calculate5(650); updateAmmo5('4')" class="str-button">Orbital airburst strike</button>
+        <button data-tag="spt" onclick="calculate5(3250); updateAmmo5('15')" class="str-button">Orbital 120mm HE barrage</button>
+        <button data-tag="spt" onclick="calculate5(300); updateAmmo5('6')" class="str-button">Orbital smoke strike</button>
+        <button data-tag="spt" onclick="calculate5(400); updateAmmo5('1')" class="str-button">Orbital EMS strike</button>
+        <button data-tag="spt" onclick="calculate5(4500); updateAmmo5('15')" class="str-button">Orbital walking barrage</button>
+        <button data-tag="spt" onclick="calculate5(4500); updateAmmo5('15')" class="str-button">Orbital 380mm HE barrage</button>
+        <button data-tag="spt" onclick="calculate5(600); updateAmmo5('5')" class="str-button">Orbital laser</button>
+        <button data-tag="spt" onclick="calculate5(2500); updateAmmo5('25')" class="str-button">Orbital Napalm barrage</button>
+        <button data-tag="spt" onclick="calculate5(8500); updateAmmo5('1')" class="str-button">Orbital railcannon strike</button>
             </div>
             <div>
-        <label  style="color: #FFFF00;" data-tag="indent">Energy-Based</label><br>
-        <button data-tag="las" onclick="calculate5(120); updateAmmo5('5')" class="str-button">LAS-98 Laser cannon</button>
+        <label  style="color: #FFFF00;" data-tag="indent">Eagle Hangar</label><br>
+        <button data-tag="las" onclick="calculate5(700); updateAmmo5('6')" class="str-button">Eagle Strafing Run</button>
+        <button data-tag="las" onclick="calculate5(2300); updateAmmo5('6')" class="str-button">Eagle airstrike</button>
+        <button data-tag="las" onclick="calculate5(1850); updateAmmo5('6')" class="str-button">Eagle cluster bomb</button>
+        <button data-tag="las" onclick="calculate5(1750); updateAmmo5('6')" class="str-button">Eagle napalm airstrike</button>
+        <button data-tag="las" onclick="calculate5(1500); updateAmmo5('6')" class="str-button">Eagle smoke strike</button>
+        <button data-tag="las" onclick="calculate5(800); updateAmmo5('6')" class="str-button">Eagle 110mm rocket pods</button>
+        <button data-tag="las" onclick="calculate5(3500); updateAmmo5('1')" class="str-button">500 kilogram bomb</button>
             </div>
             <div>
-        <label  style="color: #FF9900;" data-tag="indent">Explosive</label><br>
-        <button data-tag="ar" onclick="calculate5(2000); updateAmmo5('1')" class="str-button">EAT-017 Expendable anti tank</button>
+        <label  style="color: #FF9900;" data-tag="indent">Emplacements</label><br>
+        <button data-tag="ar" onclick="calculate5(150); updateAmmo5('22')" class="str-button">Hmg emplacement</button>
+        <button data-tag="ar" onclick="calculate5(200); updateAmmo5('4')" class="str-button">Grenadier battlement</button>
+        <button data-tag="ar" onclick="calculate5(1200); updateAmmo5('2')" class="str-button">Anti tank emplacement</button>
             </div>
+            <div></div>
+        <label  style="color: #AA00FF;" data-tag="indent">Sentries</label><br>
+        <button data-tag="spe" onclick="calculate5(90); updateAmmo5('11')" class="str-button">HMG sentry</button>
+        <button data-tag="spe" onclick="calculate5(70); updateAmmo5('27')" class="str-button">Gatling sentry</button>
+        <button data-tag="spe" onclick="calculate5(510); updateAmmo5('1')" class="str-button">Mortar Sentry</button>
+        <button data-tag="spe" onclick="calculate5(600); updateAmmo5('3')" class="str-button">Autocannon Sentry</button>
+        <button data-tag="spe" onclick="calculate5(600); updateAmmo5('1')" class="str-button">Tesla tower</button>
+        <button data-tag="spe" onclick="calculate5(300); updateAmmo5('1')" class="str-button">EMS Mortar Sentry</button>
+        <button data-tag="spe" onclick="calculate5(675); updateAmmo5('2')" class="str-button">rocket sentry</button>
+        <button data-tag="spe" onclick="calculate5(12.5); updateAmmo5('12')" class="str-button">flame sentry</button>
+        <button data-tag="spe" onclick="calculate5(35); updateAmmo5('10')" class="str-button">laser sentry</button>
+        <button data-tag="spe" onclick="calculate5(200); updateAmmo5('1')" class="str-button">Gas mortar sentry</button>
+            </div>    
             <div>
-        <label  style="color: #AA00FF;" data-tag="indent">Special</label><br>
-        <button data-tag="spe" onclick="calculate5(12.5); updateAmmo5('12')" class="str-button">FLAM-40 Flamethrower</button>
+        <label  style="color: #AA00FF;" data-tag="indent">Vehicles</label><br>
+        <button data-tag="spe" onclick="calculate5(150); updateAmmo5('10')" class="str-button">Bastion Gun</button>
+        <button data-tag="spe" onclick="calculate5(3500); updateAmmo5('1')" class="str-button">Bastion Cannon</button>
+        <button data-tag="spe" onclick="calculate5(150); updateAmmo5('20')" class="str-button">Maelstrom Gun</button>
+        <button data-tag="spe" onclick="calculate5(2000); updateAmmo5('4')" class="str-button">Maelstrom Cannon</button>
+        <button data-tag="spe" onclick="calculate5(150); updateAmmo5('10')" class="str-button">FRV HMG</button>
+        <button data-tag="spe" onclick="calculate5(65); updateAmmo5('11')" class="str-button">Supply FRV Sentry</button>
+        <button data-tag="spe" onclick="calculate5(12.5); updateAmmo5('25')" class="str-button">Lumberer Fire</button>
+        <button data-tag="spe" onclick="calculate5(3500); updateAmmo5('1')" class="str-button">Lumberer AT</button>
+        <button data-tag="spe" onclick="calculate5(1000); updateAmmo5('2')" class="str-button">Breakthrough Exosuit Shield</button>
+        <button data-tag="spe" onclick="calculate5(3600); updateAmmo5('3')" class="str-button">Breakthrough Exosuit Shotgun</button>
+        <button data-tag="spe" onclick="calculate5(90); updateAmmo5('20')" class="str-button">patriot Exosuit Gun</button>
+        <button data-tag="spe" onclick="calculate5(1650); updateAmmo5('1')" class="str-button">patriot Exosuit Rockets</button>
+        <button data-tag="spe" onclick="calculate5(350); updateAmmo5('6')" class="str-button">Emancipator Exosuit</button>
             </div>
     </div>
     </div>
